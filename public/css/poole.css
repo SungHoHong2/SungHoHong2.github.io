@@ -231,8 +231,8 @@ tbody tr:nth-child(odd) th {
  */
 
 .lead {
-  font-size: 1.25rem;
-  font-weight: 300;
+  font-size: 1.00rem;
+  font-weight: 100;
 }
 
 
