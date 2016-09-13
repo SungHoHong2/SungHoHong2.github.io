@@ -60,7 +60,8 @@ html {
 
 @media (max-width: 769px) {
   .lead{
-    background : red ;
+    margin-left:  auto;
+    margin-right: auto;
   }
 }
 
