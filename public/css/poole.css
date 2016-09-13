@@ -56,6 +56,10 @@ html {
   html {
     font-size: 20px;
   }
+  
+  .lead{
+    background : red ;
+  }
 }
 
 body {
@@ -400,8 +404,6 @@ a.pagination-item:hover {
     border-top-right-radius:    4px;
     border-bottom-right-radius: 4px;
   }
-  .lead{
-    background : red ;
-  }
+
   
 }
