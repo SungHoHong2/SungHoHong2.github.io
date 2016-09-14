@@ -117,6 +117,7 @@ html {
 .sidebar-profile {
     background-image: url("https://raw.githubusercontent.com/SungHoHong2/SungHoHong2.github.io/master/public/profile-m.png");
     width: 355px;
+    height: 380px;
     margin-bottom: -100px;
     margin: auto;
   }
