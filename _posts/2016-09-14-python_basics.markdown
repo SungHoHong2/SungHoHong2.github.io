@@ -25,7 +25,8 @@ anything = [10, 'hello', 'ahoy', 123.5]
 ```
 <br>
 <br>the list items are **ordered** starting with index
-```python
+
+``` python
 greetings = ['cheers', 'cheerio', 'watcha', 'hiya'] 
 
 #cheers
@@ -42,7 +43,8 @@ greetings[1:3]
 <br>
 <br> Create a list and add items 
 <br> Removing items 
-```python
+
+``` python
 slang = ['cheerio', 'pip pip', 'smashing']
 print(slang)
 
