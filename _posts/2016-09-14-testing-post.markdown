@@ -2,6 +2,6 @@
 published: true
 title: testing Post
 layout: post
-categories: [languages]
+category: languages
 ---
 <p> sdfsdf  </p>
