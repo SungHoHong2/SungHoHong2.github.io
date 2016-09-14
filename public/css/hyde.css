@@ -140,6 +140,12 @@ html {
 }
 
 
+@media (max-height: 800px), (max-height: 435px) {
+.sidebar-profile {
+    margin-bottom: 0px;
+}
+
+
 /*
 @media (max-height: 600px) {
 .sidebar-profile {
