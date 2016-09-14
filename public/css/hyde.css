@@ -130,7 +130,7 @@ html {
 
 @media (max-height: 800px) {
 .sidebar-profile {
-    margin-bottom: -100px;
+    margin-bottom: -200px;
   }
 }
 
