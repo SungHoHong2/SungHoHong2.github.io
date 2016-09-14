@@ -133,6 +133,12 @@ html {
   }
 }
 
+@media (max-height: 500px) {
+.sidebar-profile {
+    visibility: hidden;
+  }
+}
+
 /* About section */
 .sidebar-about h1 {
   color: #fff;
