@@ -102,6 +102,7 @@ html {
 .sidebar-profile {
     visibility: hidden;
     height : 0px;
+    margin-bottom: 0px;
   }
 }
 
