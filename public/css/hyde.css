@@ -77,9 +77,10 @@ html {
 
 .sidebar-profile {
     background-image: url("https://raw.githubusercontent.com/SungHoHong2/SungHoHong2.github.io/master/public/Untitled-3.png");
-    width: 357px;
+    width: 356px;
     height: 355px;
-    margin-left: -37px;
+    margin-left: -36px;
+    background-repeat: no-repeat;
 }
 
 
