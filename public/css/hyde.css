@@ -113,6 +113,7 @@ html {
 .sidebar-nav {
   padding-left: 0;
   list-style: disc;
+  margin-top: 37px;
 }
 .sidebar-nav-item {
   display: block;
