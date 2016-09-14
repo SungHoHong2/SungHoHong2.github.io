@@ -98,7 +98,7 @@ html {
     background-repeat: no-repeat;
 }
 
-@media (max-height: 500px) {
+@media (max-height: 554px) {
 .sidebar-profile {
     visibility: hidden;
     height : 0px;
