@@ -192,9 +192,17 @@ a.sidebar-nav-item:focus {
   }
 }
 
+@media (min-width: 929px) {
+  .sidebar {
+    max-width: 750px;
+    margin-left: 375px;
+    margin-right: 32px;
+  }
+}
+
 @media (min-width: 1024px) {
   .content {
-    margin-left: 352px;
+    margin-left: 375px;
     margin-right: 64px;
   }
 }
