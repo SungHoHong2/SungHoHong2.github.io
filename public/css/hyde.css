@@ -75,8 +75,8 @@ html {
   color: #fff;
 }
 
-.sidebar a:hover {
-  color: #76B8FF
+.sidebar > a:hover {
+  color: #76B8FF;
 }
 
 .sidebar-profile {
