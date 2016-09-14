@@ -123,6 +123,19 @@ html {
   }
 }
 
+@media (max-width: 800px) {
+.sidebar-profile {
+    width: 356px;
+    height: -100px;
+  }
+}
+@media (max-width: 600px) {
+.sidebar-profile {
+    width: 356px;
+    height: -200px;
+  }
+}
+
 /* About section */
 .sidebar-about h1 {
   color: #fff;
