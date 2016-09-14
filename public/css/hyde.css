@@ -83,6 +83,21 @@ html {
     background-repeat: no-repeat;
 }
 
+@media (max-width: 927px) {
+.sidebar-profile {
+    width: 320px;
+    height: 355px;
+    margin-left: -64px;
+  }
+}
+
+@media (max-width: 767px) {
+.sidebar-profile {
+    width: 355px;
+    height: 355px;
+    margin: auto;
+  }
+}
 
 /* About section */
 .sidebar-about h1 {
@@ -130,6 +145,7 @@ a.sidebar-nav-item:focus {
     left:   1rem;
   }
 }
+
 
 
 /* Container
