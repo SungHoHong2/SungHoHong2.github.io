@@ -1,8 +1,7 @@
 ---
 published: true
-title: testing post - 001 
+title: testpost-001
 layout: post
-permalink: testingpost/post
 ---
 <article class="markdown-body entry-content" itemprop="text"><table data-table-type="yaml-metadata">
   <thead>
