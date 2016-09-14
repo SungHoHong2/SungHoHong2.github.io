@@ -173,18 +173,18 @@ a.sidebar-nav-item:focus {
   padding-bottom: 4rem;
 }
 
-@media (min-width: 48rem) {
+@media (min-width: 768px) {
   .content {
-    max-width: 38rem;
-    margin-left: 20rem;
-    margin-right: 2rem;
+    max-width: 608px;
+    margin-left: 320px;
+    margin-right: 32px;
   }
 }
 
-@media (min-width: 64rem) {
+@media (min-width: 1024px) {
   .content {
-    margin-left: 22rem;
-    margin-right: 4rem;
+    margin-left: 352px;
+    margin-right: 64px;
   }
 }
 
@@ -195,21 +195,21 @@ a.sidebar-nav-item:focus {
  * Flip the orientation of the page by placing the `.sidebar` on the right.
  */
 
-@media (min-width: 48rem) {
+@media (min-width: 768px) {
   .layout-reverse .sidebar {
     left: auto;
     right: 0;
   }
   .layout-reverse .content {
-    margin-left: 2rem;
-    margin-right: 20rem;
+    margin-left: 32px;
+    margin-right: 320px;
   }
 }
 
-@media (min-width: 64rem) {
+@media (min-width: 1024px) {
   .layout-reverse .content {
-    margin-left: 4rem;
-    margin-right: 22rem;
+    margin-left: 64px;
+    margin-right: 352px;
   }
 }
 
