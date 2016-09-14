@@ -98,7 +98,13 @@ html {
     background-repeat: no-repeat;
 }
 
-
+@media (max-height: 500px) {
+.sidebar-profile {
+    visibility: hidden;
+    height : 0px;
+    margin-bottom: 0px;
+  }
+}
 
 @media (max-width: 928px) {
 .sidebar-profile {
@@ -136,13 +142,7 @@ html {
   }
 }
 
-@media (max-height: 500px) {
-.sidebar-profile {
-    visibility: hidden;
-    height : 0px;
-    margin-bottom: 0px;
-  }
-}
+
 
 /* About section */
 .sidebar-about h1 {
