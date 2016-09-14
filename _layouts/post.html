@@ -13,7 +13,7 @@ layout: default
    <ul class="related-posts">
      
      {% for post in site.related_posts %}
-        {% if post.permalink == page.permalink %} 
+        {% if post.categories == page.categories %} 
          <li>
            <h3>
              <a href="{{ post.url }}">
