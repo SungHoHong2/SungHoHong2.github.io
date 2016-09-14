@@ -3,6 +3,6 @@ published: true
 title: testing Post
 layout: post
 categories: [languages]
-permalink: /test/test
+permalink: /languages/
 ---
 <p> sdfsdf  </p>
