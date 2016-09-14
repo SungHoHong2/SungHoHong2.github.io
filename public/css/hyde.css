@@ -139,6 +139,13 @@ html {
   }
 }
 
+@media (max-height: 500px)
+.sidebar-profile {
+    visibility: hidden;
+    height: 0px;
+    margin-bottom: 0px;
+}
+
 /*
 @media (max-height: 600px) {
 .sidebar-profile {
