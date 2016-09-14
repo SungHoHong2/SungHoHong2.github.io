@@ -34,12 +34,12 @@
 html {
   font-family: "PT Sans", Helvetica, Arial, sans-serif;
 }
-@media (min-width: 767px) {
+@media (min-width: 48rem) {
   html {
     font-size: 16px;
   }
 }
-@media (min-width: 927px) {
+@media (min-width: 58rem) {
   html {
     font-size: 20px;
   }
@@ -59,7 +59,7 @@ html {
   color: rgba(255,255,255,.5);
   background-color: #202020;
 }
-@media (min-width: 767px) {
+@media (min-width: 48rem) {
   .sidebar {
     position: fixed;
     top: 0;
@@ -95,7 +95,7 @@ html {
   }
 }
 
-@media (max-width: 767px) {
+@media (max-width: 48rem) {
 .sidebar-profile {
     background-image: url("https://raw.githubusercontent.com/SungHoHong2/SungHoHong2.github.io/master/public/profile-m.png");
     width: 355px;
@@ -151,7 +151,7 @@ a.sidebar-nav-item:focus {
  * contents to the bottom of the sidebar in tablets and up.
  */
 
-@media (min-width: 767px) {
+@media (min-width: 48rem) {
   .sidebar-sticky {
     position: absolute;
     right:  1rem;
@@ -173,7 +173,7 @@ a.sidebar-nav-item:focus {
   padding-bottom: 4rem;
 }
 
-@media (min-width: 767px) {
+@media (min-width: 48rem) {
   .content {
     max-width: 38rem;
     margin-left: 20rem;
@@ -195,7 +195,7 @@ a.sidebar-nav-item:focus {
  * Flip the orientation of the page by placing the `.sidebar` on the right.
  */
 
-@media (min-width: 767px) {
+@media (min-width: 48rem) {
   .layout-reverse .sidebar {
     left: auto;
     right: 0;
