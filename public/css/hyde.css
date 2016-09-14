@@ -123,12 +123,13 @@ html {
 
 @media (max-height: 800px) {
 .sidebar-profile {
-    height: -100px;
+    margin-bottom: -100px;
   }
 }
+
 @media (max-height: 600px) {
 .sidebar-profile {
-    height: -200px;
+    margin-bottom: -200px;
   }
 }
 
