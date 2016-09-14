@@ -75,6 +75,13 @@ html {
   color: #fff;
 }
 
+.sidebar-profile {
+  background-image : url("https://raw.githubusercontent.com/SungHoHong2/SungHoHong2.github.io/master/public/Untitled-3.png")
+  width: 100px;
+  height:100px;
+}
+
+
 /* About section */
 .sidebar-about h1 {
   color: #fff;
@@ -82,6 +89,7 @@ html {
   font-family: "Abril Fatface", serif;
   font-size: 3.25rem;
 }
+
 
 /* Sidebar nav */
 .sidebar-nav {
