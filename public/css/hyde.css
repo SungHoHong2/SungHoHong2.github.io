@@ -134,13 +134,12 @@ html {
 
 @media (max-height: 800px) {
 .sidebar-profile {
-    
     margin-bottom: -200px;
   }
 }
 
 
-@media (max-height: 800px), (max-height: 435px) {
+@media (max-height: 800px), (max-width: 435px) {
 .sidebar-profile {
     margin-bottom: 0px;
 }
