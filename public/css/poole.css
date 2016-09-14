@@ -58,13 +58,6 @@ html {
   }
 }
 
-@media (max-width: 769px) {
-  .lead{
-    margin-left:  auto;
-    margin-right: auto;
-  }
-}
-
 
 body {
   color: #515151;
@@ -241,7 +234,6 @@ tbody tr:nth-child(odd) th {
 .lead {
   font-size: 17px;
   font-weight: 100;
-  width : 197px;
 }
 
 
