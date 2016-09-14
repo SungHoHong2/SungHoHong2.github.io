@@ -4,6 +4,6 @@ title: fdsdfsdf
 layout: post
 tags: [sdfgdsfgdfg]
 categories: [sdgdsfg]
-permalink: dfgsdfgdfg
+permalink: testsite/test
 ---
 sdfsdfsdfsdf
