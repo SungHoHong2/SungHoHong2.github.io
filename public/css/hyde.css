@@ -102,7 +102,11 @@ html {
 
 @media (max-width: 435px) {
 .sidebar-profile {
-    background-image: url("");
+    background-image: url("https://raw.githubusercontent.com/SungHoHong2/SungHoHong2.github.io/master/public/profile-m-s.png");
+    width: 355px;
+    height: 355px;
+    margin-left: 0px;
+    margin: auto;
   }
 }
 
