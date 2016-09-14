@@ -75,6 +75,10 @@ html {
   color: #fff;
 }
 
+.sidebar a:hover {
+  color: #76B8FF
+}
+
 .sidebar-profile {
     background-image: url("https://raw.githubusercontent.com/SungHoHong2/SungHoHong2.github.io/master/public/profile.png");
     width: 356px;
