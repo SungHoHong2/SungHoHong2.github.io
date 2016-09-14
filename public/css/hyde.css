@@ -86,7 +86,7 @@ html {
 /* Sidebar nav */
 .sidebar-nav {
   padding-left: 0;
-  list-style: none;
+  list-style: disc;
 }
 .sidebar-nav-item {
   display: block;
@@ -97,6 +97,11 @@ a.sidebar-nav-item:focus {
 }
 .sidebar-nav-item.active {
   font-weight: bold;
+}
+
+.sidebar-nav_child {
+  padding-left: 0;
+  list-style: none;
 }
 
 /* Sticky sidebar
