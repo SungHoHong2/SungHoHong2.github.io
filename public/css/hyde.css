@@ -101,6 +101,7 @@ html {
 @media (max-height: 500px) {
 .sidebar-profile {
     visibility: hidden;
+    height : 0px;
   }
 }
 
