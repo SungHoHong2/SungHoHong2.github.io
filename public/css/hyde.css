@@ -111,13 +111,11 @@ html {
   }
 }
 
-@media (max-width: 768px) {
+@media (max-width: 769px) {
 .sidebar-profile {
     background-image: url("https://raw.githubusercontent.com/SungHoHong2/SungHoHong2.github.io/master/public/profile-m.png");
     width: 355px;
     margin: auto;
-    visibility: true;
-
   }
 }
 
