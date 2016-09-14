@@ -123,13 +123,13 @@ html {
   }
 }
 
-@media (max-width: 800px) {
+@media (max-height: 800px) {
 .sidebar-profile {
     width: 356px;
     height: -100px;
   }
 }
-@media (max-width: 600px) {
+@media (max-height: 600px) {
 .sidebar-profile {
     width: 356px;
     height: -200px;
