@@ -87,7 +87,7 @@ html {
     background-repeat: no-repeat;
 }
 
-@media (min-width: 928px) {
+@media (max-width: 928px) {
 .sidebar-profile {
     width: 320px;
     height: 567px;
@@ -95,7 +95,7 @@ html {
   }
 }
 
-@media (min-width: 768px) {
+@media (max-width: 768px) {
 .sidebar-profile {
     background-image: url("https://raw.githubusercontent.com/SungHoHong2/SungHoHong2.github.io/master/public/profile-m.png");
     width: 355px;
