@@ -130,13 +130,15 @@ html {
     height: 0px;
   }
 }
-/*
+
 @media (max-height: 800px) {
 .sidebar-profile {
+    
     margin-bottom: -200px;
   }
 }
 
+/*
 @media (max-height: 600px) {
 .sidebar-profile {
     margin-bottom: -200px;
