@@ -1,0 +1,10 @@
+---
+published: true
+title: go post
+layout: post
+tags: [languages, python]
+categories: [languages]
+---
+##test
+
+#test
