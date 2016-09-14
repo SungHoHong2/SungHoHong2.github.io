@@ -2,9 +2,8 @@
 published: true
 title: Learning about Python basics
 layout: post
-permalink: /languages
+permalink: /languages/check
 ---
-
 # Lists and Dictionaries
 
 
@@ -14,5 +13,3 @@ permalink: /languages
 
 
 # Lists and Dictionaries
-
-
