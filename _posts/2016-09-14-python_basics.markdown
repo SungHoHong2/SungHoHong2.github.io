@@ -83,6 +83,7 @@ del slang['cheerio']
 #get the value
 result = slang.get('bloody')
 
+
 #print the value which exits
 if result:
 	print(result)
@@ -96,6 +97,7 @@ else:
 ### Comparing List
 
 <br>Checking whether the lists are equal or not 
+
 ``` python
 my_list = [1,2,3,4]
 your_list = [1,2,3,4]
@@ -103,8 +105,11 @@ your_list = [1,2,3,4]
 print(my_list==your_list) #true 
 
 ```
+
+
 <br>
 <br> compare with the dictionary 
+
 
 ``` python
 #order does not matter in dictionary 
