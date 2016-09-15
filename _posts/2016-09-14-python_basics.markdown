@@ -59,8 +59,9 @@ del slang[3]
 ```
 
 <br>
-<br> ### Dictionary
-The data has a key and value
+ 
+### Dictionary
+<br>The data has a key and value
 
 ``` python
 slang = {'cheerio' : 'goodbye'
@@ -89,26 +90,6 @@ else:
 	print('key does not exists')
 
 ```
-
-
-
-
-
-
-
-
-
-
-
-
-
-
-
-
-
-
-```
-
 
 
 
