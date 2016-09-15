@@ -177,11 +177,39 @@ for i in range(10):
 for i in range(2005,2016, 2):
 	print(i)
 
-
-
 ```
 
+<br>
 
+### Creating the Monty Python Restaurant Menu 
+
+ 
+``` python
+
+slang = ['Knachered', 'Pip pip', 'Squidgy', 'Smashing']
+menu = []
+
+# add spams in the menu list 
+for word in slang:
+	menu.append(word + 'Spam')
+
+print(menu)
+
+
+# store the menu item with the prices in the dictionary 
+price = 0.50
+for item in menu:
+	menu_prices[item] = price
+	price += 1 
+
+print(menu_prices)
+
+
+# get the data from the dictionary using loop
+for name, price in menu_prices.items():
+	print(name,' : $', format(price,'.2f') )
+
+```
  
 
 
