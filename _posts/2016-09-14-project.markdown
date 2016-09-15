@@ -1,7 +1,0 @@
----
-published: true
-title: Project test
-layout: post
-permalink: /projects/
----
-# List of projects 
