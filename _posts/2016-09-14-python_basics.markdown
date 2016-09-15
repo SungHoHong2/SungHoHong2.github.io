@@ -58,6 +58,56 @@ del slang[3]
 
 ```
 
+<br>
+<br> ### Dictionary
+The data has a key and value
+
+``` python
+slang = {'cheerio' : 'goodbye'
+	, 'knackered' : 'tired'
+ 	, 'yonks': 'ages'
+	}
+print(slang['cheerio'])
+
+#creating dicitionary and adding values
+#same goes for the updates
+slang = {}
+slang['knachered'] = 'tired'
+slang['smashing'] = 'terrific'
+print(slang)
+
+#removing the values
+del slang['cheerio']
+
+#get the value
+result = slang.get('bloody')
+
+#print the value which exits
+if result:
+	print(result)
+else:
+	print('key does not exists')
+
+```
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+```
 
 
 
