@@ -99,19 +99,22 @@ else:
 <br>Checking whether the lists are equal or not 
 
 ``` python
+
 my_list = [1,2,3,4]
 your_list = [1,2,3,4]
 
 print(my_list==your_list) #true 
 
+
 ```
 
 
 <br>
-<br> compare with the dictionary 
+<br>Compare with the dictionary 
 
 
 ``` python
+
 #order does not matter in dictionary 
 
 my_dict = {1:1, 2:2, 3:3}
