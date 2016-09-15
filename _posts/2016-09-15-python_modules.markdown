@@ -70,7 +70,7 @@ main()
 
 ```
 
-### Files
+### File Write 
 One way of using the sub-memory type data
 <br> steps to write a file 
 
@@ -97,7 +97,7 @@ sales_log.close()
 
 <br>
 
-### Files Sample
+### Files Writing Sample
 
 ``` python
 
@@ -123,7 +123,30 @@ main()
 
 ```
 
+### File Read
 
+``` python
+
+dollar_spam = open('dollar_menu.txt', 'r')
+
+# read the entire file 
+print(dollar_spam.read())
+
+# read one line at a time 
+print(dollar_spam.readline())
+print(dollar_spam.readline())
+
+# using for loop while reading file 
+dollar_menu = []
+for line in dollar_spam:
+	# remove the (\n) in the line 
+	line.strip()
+	dollar_menu.append(line)
+print(dollar_menu) 
+
+dollar_spam.close()
+
+```
 
 
 
