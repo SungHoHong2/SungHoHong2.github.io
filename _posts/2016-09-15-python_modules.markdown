@@ -70,6 +70,59 @@ main()
 
 ```
 
+### Files
+One way of using the sub-memory type data
+<br> steps to write a file 
+
+``` python
+
+# w: write
+# r: read
+# a: append
+
+#open a file
+sales_log = open('spam_orders.txt', 'w')
+
+#write a file
+sales_log.write('The Spam Van')
+
+#write a file with adding new lines 
+sales_log.write('Sales Log\n')
+
+#close file
+sales_log.close()
+
+```
+
+
+<br>
+### Files Sample
+
+``` python
+
+def write_sales_log(order):
+	#open the file
+	#append in order to prevent initializing the file during the second attempt
+	file = open('sales.txt', 'a')
+	
+	total = 0 
+	for item, price in order.items():
+		file.write(item + '  '+ format(price, '.2f') + '\n')
+		total += price	
+	
+	file.write('total = '+ format(total, '.2f') + '\n')
+	file.close()
+
+def main():
+	order = { 'Cheeky spam' : 1.0
+        	  'Yonks Spam'  : 4.0 } 	
+	write_sales_log(order)
+
+main()
+
+```
+
+
 
 
 
