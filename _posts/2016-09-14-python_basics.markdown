@@ -124,6 +124,62 @@ print(my_dict==your_dict) #true
 
 ```
 
+<br>
+
+### Loop Basics 
+
+basic funciton of loops 
+
+``` python
+
+#creating loop
+prices = [2,50, 3.50, 4.5]
+total = 0
+for price in prices:
+	print('prices is ', price)
+	total += price
+	print('total is', total)
+
+```
+
+<br>
+<br>Generating a random letter
+
+``` python
+
+import random
+
+#random number from 0.0 to 1.0 
+print(random.random())
+
+#random number from the list
+print(random.choice([1,2,3,4,5]))
+
+
+#random number from the range 
+print(random.randint(1,1000))
+
+```
+
+<br>
+<br>Creating list for the loop 
+
+``` python
+
+import random 
+
+for i in range(10): 
+	ticket = random.randint(1,1000)
+	print(ticket)
+
+#start stop step values in range 
+#result: 2005, 2007, 2009...
+for i in range(2005,2016, 2):
+	print(i)
+
+
+
+```
 
 
  
