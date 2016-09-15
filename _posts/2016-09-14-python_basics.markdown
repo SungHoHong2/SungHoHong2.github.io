@@ -61,7 +61,7 @@ del slang[3]
 <br>
  
 ### Dictionary
-<br>The data has a key and value
+The data has a key and value
 
 ``` python
 slang = {'cheerio' : 'goodbye'
@@ -90,6 +90,35 @@ else:
 	print('key does not exists')
 
 ```
+
+<br>
+### Comparing List
+<br>Checking whether the lists are equal or not 
+``` python
+my_list = [1,2,3,4]
+your_list = [1,2,3,4]
+
+print(my_list==your_list) #true 
+
+```
+<br>
+<br> compare with the dictionary 
+``` python
+#order does not matter in dictionary 
+
+my_dict = {1:1, 2:2, 3:3}
+your_dict = {2:2, 3:3, 1:1}
+
+print(my_dict==your_dict) #true 
+
+```
+
+
+
+ 
+
+
+
 
 
 
