@@ -210,6 +210,48 @@ for name, price in menu_prices.items():
 	print(name,' : $', format(price,'.2f') )
 
 ```
+
+<br>
+
+### While loop 
+
+for loops only have a specified limit 
+<br>but while loops are infinite based on the conditions 
+
+``` python
+
+x=1
+while x != 3:
+	print('x is', x)
+	x = x + 1
+
+# Ordering interface
+order = []
+while (order.upper()=='Q'):
+        order = input['What would you like to order? (Q to Quit)']
+	found = menu.get(order)
+	if found:
+		orders.append(order)
+	else:
+		print('menu does not exists')
+
+
+# Alternative 
+while(true):
+	order = input['What would you like to order? (Q to Quit)']
+		
+	# Continue jumps to the first line of the while statement
+	if order == 'Cheeky Spam:
+		print('We are out of Cheeky Spam')
+		continue
+	if order.upper == 'Q':
+		break
+
+```
+
+
+
+
  
 
 
