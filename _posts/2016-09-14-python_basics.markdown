@@ -2,8 +2,8 @@
 published: true
 title: Learning about Python basics
 layout: post
-category: study
-permalink: /study/
+category: programming
+permalink: /programming/
 ---
 
 ### List and Dictionaries
