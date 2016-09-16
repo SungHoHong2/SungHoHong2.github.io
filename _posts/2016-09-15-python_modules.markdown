@@ -148,5 +148,43 @@ dollar_spam.close()
 
 ```
 
+<br>
+
+### Exceptions
+
+``` python
+
+try:
+	file = open('gogo.txt')
+except:
+	print('file does not exists')
+
+```
+
+<br>
+
+### Using JSON to format and share data 
+
+JSON is a standard way to format and share data 
+<br> Using the Request Module will help receive HTTP requests
+
+``` python
+
+import requests
+my_request = requests.get('http://go.codeschool.com/spamvanmenu')
+menu_list = my_request.json()
+print(menu_list)
+
+print('Today's Menu')
+for item in menu_list:
+	print(item['name'], item['desc'], item['price'])
+
+```
+
+
+
+
+
+
 
 
