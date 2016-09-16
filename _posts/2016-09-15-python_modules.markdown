@@ -3,7 +3,7 @@ published: true
 title: Learning about Python modules
 layout: post
 category: programming
-permalink: /programming/
+permalink: /programming/python_module
 ---
 
 ### Functions
