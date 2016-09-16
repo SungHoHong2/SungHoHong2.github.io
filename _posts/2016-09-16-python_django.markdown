@@ -1,6 +1,6 @@
 ---
 published: true
-title: Learning about Python modules
+title: Django Basic
 layout: post
 category: programming
 permalink: /programming/
