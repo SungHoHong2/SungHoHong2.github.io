@@ -181,7 +181,42 @@ for item in menu_list:
 
 ```
 
+<br>
 
+### Seperating Modules
+
+orders.py
+
+``` python
+
+def print_menu(menu):
+	...
+
+def get_order(menu):
+	...
+
+def total_bill(orders, menu):
+	...
+
+```
+
+<br>
+spam_van.py
+
+``` python
+
+import orders
+
+def main():
+	menu = {'Cheerio Spam': 0.50 ...}
+	orders.print_menu(menu)
+	orders = orders.get_order(menu)
+	total = orders.bill_total(orders, menu)
+	print('You ordered:', order, 'Total:', total)
+
+main()
+
+```
 
 
 
