@@ -113,10 +113,36 @@ urlpatterns = [
 
 ```
 
+<br>
 
+### Refactoring the Project's URL Dispatcher
 
+First remove the index/ from the regex and match the empty path 
 
+<br> project/project/urls.py
 
+``` python
 
+from django.conf.urls import include, url
+from django.contrib import admin
 
+urlpatterns = [
+	url(r'^admin/', admin.site.urls)
+	url(r'^', include('main_app.urls'))
+]
+
+```
+
+<br> project/main_app/urls.py
+
+``` python
+
+from django.conf.urls import url
+from . import views
+
+urlpatterns = [
+	url(r'^$', views.index)
+]
+
+```
 
