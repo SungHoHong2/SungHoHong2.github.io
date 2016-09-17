@@ -146,3 +146,11 @@ urlpatterns = [
 
 ```
 
+<br>
+ 
+![Model Image](http://postfiles3.naver.net/20160917_274/maverickjin8_1474118295512HO2I2_PNG/python_1.png?type=w2)
+
+![Model Image2](http://postfiles4.naver.net/20160917_131/maverickjin8_1474118296099ON3yj_PNG/python_2.png?type=w2)
+
+
+
