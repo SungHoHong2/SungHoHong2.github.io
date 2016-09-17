@@ -31,4 +31,92 @@ The validation, rendering, processing is taken care of by seperate components in
 3. Model (Stores and Validate data) 
 4. Template (Renders HTML)
 
+<br>
+
+### Django Projects vs Apps 
+
+Project contains several apps 
+
+<br> Project > Apps 
+
+<br>
+
+
+### Preparing Django 
+
+Using pip after installing python  
+
+```
+pip install django
+
+```
+
+<br> Creating Django project
+
+```
+
+django-admin startproject Treasuregram
+
+```
+ 
+<br> Running project in the Server 
+
+```
+
+python manage.py runserver
+
+```
+
+<br> Creating an App inside the project 
+
+```
+
+python manage.py startapp main_app
+
+```
+
+<br>
+
+
+### Basic Idea of View 
+
+view is like a controller in spring framework <br>
+A view is simply a Python function that takes in a web request and returns a web response 
+
+<br> project/main_app/views.py
+
+``` python 
+
+from django shortcuts import render
+from django.http import httpResponse
+
+# updating views 
+def index(request):
+	return HttpResponse('<h1>Hello Explorers</h1>')
+
+```
+
+<br> project/project/urls.py
+<br> linking hte url to the specific response
+
+``` python
+
+from django.conf.urls import url
+from django.contrib import admin
+from main_app import views 
+
+# this url pattern checks the url that has written '/index' and maps to the function named 'index' in the views.py
+urlpatterns = [
+	url(r'^admin/', admin.site.urls)
+	    , url(r'^index/', views.index) 
+	]
+
+```
+
+
+
+
+
+
+
 
