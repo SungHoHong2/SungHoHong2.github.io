@@ -245,8 +245,6 @@ treasures = [ ... ]
 
 ```
 
-<hr>
-
 <br>
 
 ### Adding Static files 
