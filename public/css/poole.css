@@ -384,6 +384,7 @@ a.pagination-item:hover {
 }
 
 @media (min-width: 480px) {
+
   .pagination {
     margin: 48px 0;
   }
