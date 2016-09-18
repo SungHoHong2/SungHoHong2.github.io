@@ -186,7 +186,7 @@ def index(requests):
 
 <br> template 
 
-``` 
+``` python
 
 <html>
 	<head>
@@ -231,7 +231,7 @@ treasures = [ ... ]
 
 <br> html file 
 
-```
+``` python
 
 {% for treasure in treasures %}
 <p>{{ treasure.name }}</p>
@@ -244,6 +244,32 @@ treasures = [ ... ]
 {% endfor %}
 
 ```
+
+<hr>
+
+<br>
+
+### Adding Static files 
+Django will also look for static folder like the templates.
+<br> Static folder are for CSS, javascript and static images 
+<br> after adding the style.css in static folder 
+
+``` python
+
+{% load staticfiles %}
+<!DOCTYPE html>
+<html>
+	<link rel='stylesheet' type="text/css" href="{% static 'style.css'%}">
+	<link rel='stylesheet' type="text/css" href="{% static 'bootstrap.min.css'%}
+">
+
+<img src = "{% static 'images/materials-icon.png'%}">
+
+</html>
+
+```
+
+
 
 
 
