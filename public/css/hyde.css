@@ -228,11 +228,6 @@ a.sidebar-nav-item:focus {
 
 }
 
-.content > img {
-    width : 100%
-}
-
-
 @media (min-width: 929px) {
   .content {
     max-width: 822px;
