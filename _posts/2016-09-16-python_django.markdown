@@ -268,8 +268,71 @@ Django will also look for static folder like the templates.
 
 ```
 
+<hr>
 
+<br>
 
+### Adding Model 
+
+project/main_app/models.py
+
+| Django | Python | SQL |
+|--------|--------|-----|
+| models.CharField() | string | VARCHAR |
+| models.IntegerField() | int | INTEGER |  
+| models.FloatField() | float | FLOAT | 
+| models.DecimalField() | decimal | DECIMAL | 
+
+``` python
+
+from django.db import models
+class Treasure(models.Model):
+	name = models.CharField(max_length=100)
+	value = models.DecimalField(max_digits=10, decimal_places=2)
+	material = models.CharField(max_length=100)	
+	location = models.CharField(max_length=100)
+	img_url = models.CharField(max_length=100)
+
+```
+
+<br> add migrations 
+
+``` python
+
+python manage.py makemigrations
+
+```
+
+<br> Applies the migration to the database
+
+``` python
+
+python manage.py migrate
+
+```
+
+<br> Checking the migration file 
+
+``` python
+
+python manage.py sqlmigrate main_app 0001 
+
+```
+
+<br> Django interactive shell
+
+```
+
+python manage.py shell
+>>> from main_app.models import Treasure 
+>>> Treasure.objects.all()
+[]
+>>> t = Treasure(name='Coffee can', value=20.00, location='Acme, CA')
+>>> t.save()
+>>> Treasure.objects.all()
+[<Treasure: Treasure object>]
+
+```
 
 
 
