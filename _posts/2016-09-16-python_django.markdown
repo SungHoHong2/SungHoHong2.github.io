@@ -153,4 +153,62 @@ urlpatterns = [
 ![Model Image2](http://postfiles4.naver.net/20160917_131/maverickjin8_1474118296099ON3yj_PNG/python_2.png?type=w2)
 
 
+<br>
+
+<hr>
+
+###  MTV Model with Templates
+
+Django projects automatically create and look for  template files in the app, if the app is registered with the Django project in settings 
+
+<br> project/project/settings.py
+
+``` python
+
+INSTALLED APPS = [
+	'main_app'
+	...
+]
+
+```
+
+<br> view should redner an HTML template 
+<br> project/main_app/views.py 
+
+``` python
+
+from django.sorthcuts import render
+
+def index(requests):
+	name = 'Gold Nugget'
+	value = 1000.0
+	context = {
+		'treasure_name' : name
+	       ,'treasure_value' : value 
+	}
+	return render(requests, 'index.html', context )
+
+```
+
+<br> template 
+
+``` html
+
+<html>
+	<head>
+		<title>TreasureGram</title>
+	</head>
+	<body>
+		<h1>TreasureGram</h1>
+		<p>{{ treasure_name }}</p>
+		<p>{{ treasure_val }}</p>
+	</body>
+</html>
+
+```
+
+ 
+
+
+
 
