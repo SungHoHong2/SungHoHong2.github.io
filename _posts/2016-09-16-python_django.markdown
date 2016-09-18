@@ -194,8 +194,8 @@ def index(requests):
 	</head>
 	<body>
 		<h1>TreasureGram</h1>
-		<p>{{ treasure_name }}</p>
-		<p>{{ treasure_val }}</p>
+		<p><< treasure_name >></p>
+		<p><< treasure_val >></p>
 	</body>
 </html>
 
@@ -234,15 +234,15 @@ treasures = [ ... ]
 
 ``` python
 
-{% for treasure in treasures %}
+<< for treasure in treasures >>
 <p>{{ treasure.name }}</p>
 
-	{% if treasure.value > 0 %}
+	<< if treasure.value > 0 >>
 		<p>{{ treasure.value }}</p>
-	{% else %}
+	<< else >>
 		<p>unknown</p>
-	{% endif %}
-{% endfor %}
+	<< endif >>
+<< endfor >>
 
 ```
 
@@ -256,14 +256,13 @@ Django will also look for static folder like the templates.
 
 ``` python
 
-{% load staticfiles %}
+<< load staticfiles >>
 <!DOCTYPE html>
 <html>
-	<link rel='stylesheet' type="text/css" href="{% static 'style.css'%}">
-	<link rel='stylesheet' type="text/css" href="{% static 'bootstrap.min.css'%}
-">
+	<link rel='stylesheet' type="text/css" href="<< static 'style.css>>">
+	<link rel='stylesheet' type="text/css" href="<< static 'bootstrap.min.css'>>">
 
-<img src = "{% static 'images/materials-icon.png'%}">
+<img src = "<< static 'images/materials-icon.png'>>">
 
 </html>
 
