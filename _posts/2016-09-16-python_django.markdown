@@ -33,16 +33,8 @@ The validation, rendering, processing is taken care of by seperate components in
 
 <br>
 
-### Django Projects vs Apps 
 
-Project contains several apps 
-
-<br> Project > Apps 
-
-<br>
-
-
-### Preparing Django 
+### Installing Django 
 
 Using pip after installing python  
 
@@ -114,6 +106,8 @@ urlpatterns = [
 ```
 
 <br>
+
+<hr>
 
 ### Refactoring the Project's URL Dispatcher
 
@@ -192,7 +186,7 @@ def index(requests):
 
 <br> template 
 
-``` html
+``` 
 
 <html>
 	<head>
@@ -207,7 +201,56 @@ def index(requests):
 
 ```
 
+<hr>
+
+<br>
+
+### Passing More data in Dictionary Context
+
+Use a class to define more information about the context object 
+
+<br> project/main_app/views.py
  
+``` python
+
+from django.shortcuts import render
+
+def index(request):
+	return render(request, 'index.html', {'treasures' : treasures})
+
+class Treasure:
+	def __init__(self, name, value, material, location):
+		self.name = name
+		self.value = value
+		self.material = material 
+		self.location = location 
+
+treasures = [ ... ]
+
+```
+
+<br> html file 
+
+```
+
+{% for treasure in treasures %}
+<p>{{ treasure.name }}</p>
+
+	{% if treasure.value > 0 %}
+		<p>{{ treasure.value }}</p>
+	{% else %}
+		<p>unknown</p>
+	{% endif %}
+{% endfor %}
+
+```
+
+
+
+
+
+
+
 
 
 
