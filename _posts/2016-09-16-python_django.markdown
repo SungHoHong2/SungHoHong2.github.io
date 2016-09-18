@@ -250,6 +250,7 @@ treasures = [ ... ]
 <br>
 
 ### Adding Static files 
+
 Django will also look for static folder like the templates.
 <br> Static folder are for CSS, javascript and static images 
 <br> after adding the style.css in static folder 
