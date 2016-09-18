@@ -334,12 +334,3 @@ python manage.py shell
 
 ```
 
-
-
-
-
-
-
-
-
-
