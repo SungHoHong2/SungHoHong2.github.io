@@ -125,8 +125,9 @@ html {
 
 @media (max-width: 435px) {
 .sidebar-profile {
-    visibility: hidden;
-    width: 0px;
+    background-image: url("https://raw.githubusercontent.com/SungHoHong2/SungHoHong2.github.io/master/public/profile_n_s.png");
+    width: 355px;
+    height: 380px;
     margin-bottom: 0px;
   }
 }
