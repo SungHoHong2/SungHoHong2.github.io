@@ -1,0 +1,160 @@
+
+### Jupyter
+
+파이썬을 개발하기 위한 환경 제공 
+
+<br> play.dobest.io/hub/login 
+<br> id: python pwd: 파이썬 
+
+### Python 명령어
+
+1. shift + enter : 실행  
+2. dd : 해당 줄이 삭제되는 명령어  
+
+### Python의 장점 
+
+파이썬은 다양한 어플리케이션과 연동이 되고 스크립트 언어이기 때문에 작성이 편하다. 
+<br> Deep Learning, Machine Learning과 같은 데이터분석에도 사용된다. 
+<br> 데이터 분석은 파이썬을 많이 사용하지만 웹프로그래밍 같은 경우는 php, ruby, node.js와 같은 백엔드 개발언어들이 있다. 
+<br> 따라서 back-end 자체에 집중을 하는 것이 중요하고 Python 자체에는 연연해선 안 된다. 
+<br> Interpretor가 바로 해석해서 실행을 하기 떄문에 Script언어라고 부른다. 
+
+
+### Index 
+
+1. 자료형 Data Type
+2. 조건문 Conditional Statement
+3. 반복문 Loops
+4. List Comprehension: Lamda + Lamda Operator 
+5. 함수
+6. 클래스 
+7. 웹 프로그래밍 기본 프로젝트 python Flask
+8. Crawling(requests, bs4), Data 분석 (Python으로 사용해서 Naver blog 정보 수집 etc) 
+
+<br>
+
+### 자료형
+
+1. list : 순서허용 중복허용
+2. set : 순서 중복 불허 
+3. dict :  순서 중복 불허 
+4. tuple : 순서, 중복 허용, 하지면 변할 수 없음
+
+
+``` python
+
+#number 
+s = 10
+
+#string
+d = 'howdy'
+
+#list
+#여러 데이터가 순서있게 들어가면서 중복을 허용하는 자료
+#끝은 항상 -1을 적용한다.
+ 
+animals = ['dog', 'cat','fish','monkey', 'dog', 'dog']
+animals[0]  # 앞에서부터 검색하기 
+animals[-2] # 뒤에서부터 검색하기
+animals[0:2] # ['dog','cat']
+animals[3:] # ['monkey', 'dog', 'dog']
+animals[:3] # ['dog', 'cat', 'fish']
+animals[::2] # ['dog', 'fish', 'dog']
+animals[::-1] #순서를 뒤집는 방법
+
+
+#dictionary
+#key와 Value 으로 분리
+f = {'sdf' : 'sdf', 'sdfs': 'sdfdsf'}
+student = {
+	"name": "name"
+	,"title" : "title"
+}
+
+
+#tuple 
+#특수용도로 사용된다. 
+#list와 유사하고 순서와 중복을 허용한다. 
+#변할 수가 없다. (새로 추가 삭제가 불가능하다) 
+a, b = (100, 200)
+
+
+
+#set
+#중복 허용을 하지 않는다.
+set[1,1,2,3,4] #[1,2,3,4]
+
+#중복을 제거하고 리스트로 변경하는 방법
+list(set(animals))
+ 
+```
+
+### Loop 
+
+``` python 
+
+#static for문 
+for i in range(10):
+	print('hello world')
+
+#관례적으로 임시변수를 사용하지 않으면 
+for _ in range(10):
+	print('hello world')
+
+
+#list for문 
+for animal in animals:
+	print(animal)
+
+len(animals) #길이 표현 
+for animal in range(len(animals)):
+	print(animals[i])
+
+
+#dictionary for문 
+for key in student:
+	print(key+'=>'+student[key])
+ 
+#student items = tuple을 조회한다.
+for key, item in student.items():
+	print(key+'=>'+item)
+
+
+for i in range(len(students)):
+	student = students[i]
+	
+	student_data = {}
+	student_data['name'] = student[0]
+        student_data['mail'] = student[1]
+        student_data['phone'] = student[2]
+
+```
+
+### 조건문 conditional statement
+
+``` python
+
+#양수 음수 0 체크하는 코드 
+my_num = 20 
+if my_num > 0:
+        print('양수입니다.')
+elif my_num == 0:
+        print('0입니다.')
+else:
+        print('음수입니다.')
+
+```
+
+
+### PEP 
+
+Python Enhancement Proposal = Python Style Guide  
+
+
+### 개발환경 Setting
+
+Hombrew setting
+
+
+ 
+
