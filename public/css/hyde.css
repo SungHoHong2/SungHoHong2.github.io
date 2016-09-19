@@ -114,7 +114,7 @@ html {
 }
 
 @media (max-width: 767px) {
-.sidebar{profile_n_s
+.sidebar{
     background-image: url("https://raw.githubusercontent.com/SungHoHong2/SungHoHong2.github.io/master/public/profile_n_s.png");
 }
 .sidebar-profile {
