@@ -153,8 +153,182 @@ Python Enhancement Proposal = Python Style Guide
 
 ### 개발환경 Setting
 
-Hombrew setting
+1.pyenv - 언어 버전 
+2.virtualenv - 프로젝트 버전
+3.autoenv - 디렉토리별 프로필 (bash profile 유사) 
 
+<br> tmux, screen multiplexer - screen tmux
+<br> Editor - vim, EMACS 
+<br> Shell - Bash, Zshell(*), Fish
+<br> Shell Script
 
  
+
+### 파일 입출력
+
+``` python
+
+# 항상 열고 닫는 작업을 계속 할 것
+# 파일 작성하기
+fp = open("hello.txt",'w')
+fp.write('Hello World')
+fp.close()
+
+
+# 파일 읽기 
+fp2 = open("./hello.txt","r")
+fp2.read()
+fp2.close()
+
+
+#파일을 하나만 열경우 자동으로 close가되기 때문에 효율적
+with open("hello.txt","r") as fp:
+     data = fp.read()
+     print(data)
+
+
+#파일 저장내용 응용하기
+with open("../student.csv","r") as fp:
+	data = fp.read() #1 파일 읽기  
+	rows = data.split("\n") #2 newline char(\n) 나누는 작업
+	students = []	
+	
+	columns = rows[0].split(',')
+
+	for row in rows[1::]:
+		fields = row.split(',')
+		student = {} 
+		for column_index in range(len(columns)):
+			field = fields[column_index]
+			column = columns[column_index]
+			student[column]=field
+
+	students.append(student)
+
+```
+
+
+### String에 대한 함수
+1. split
+2. join
+3. replace
+4. format
+
+``` python
+
+#split 기능 
+"dog::cat::fish".split("::")
+
+",".join(["dog", "cat", "fish"])
+# output = 'dog, cat, fish'
+
+
+#replace 기능 
+data.replace("\t", ",")
+
+#format 기능
+"안녕하세요 %s 입니다." %("안수찬") 
+#안녕하세요 안수찬입니다. 
+"안녕하세요, {name} 입니다.".format(name="안수찬")
+
+```
+
+
+### Function
+
+
+``` python
+
+def read_scv(filename):
+	print(filename+"을 읽습니다.")	
+
+
+read_scv("hello.txt") 
+
+
+def print_svc(file_name, seperator=","):
+    with open(file_name,"r") as fp:
+        data = fp.read()
+        columns = data.split("\n")[0].split(',')
+        row = {}
+        list = []
+
+        for d in data.split("\n")[1::]:
+            s = d.split(",")
+
+            for col in range(len(columns)):
+                row[columns[col]] = s[col]
+
+            list.append(row)
+    return list
+
+
+print(print_svc("../students.csv", ","))
+
+
+```
+
+
+### Lamda 익명 함수
+
+
+``` python 
+
+double(300) #600
+
+def double(x):
+	return x*2
+
+lamda_double =lamda x: x*2
+lamda_double(100)
+
+#간단하고 일시적인 파일사용할 때
+(lamda x: x*2)(100)
+
+read_lsv = lambda filename: read_csv(filename,"|")
+read_tsv = lambda filename: read_csv(filename,"\t")
+
+for sep in seps:
+	reader[sep] = lambda filename: read_csv(filename, sep)
+
+#Lambda Operator (map, filter, reduce) 
+#list와 관련된 부분들을 전부 lambda 하나로 해결할 수 있다. 
+
+
+```
+
+
+### 예상 문제 
+
+``` python 
+
+#is_palindrome("토마토") =true 
+#is_palindrome("ABCDCBA") = true
+
+  def is_plaindrome(text):
+	length = len(text)
+	for i in range(length):
+		left = string[i] 
+		right = string[length-1-i]
+		
+		if left != right 
+			return False
+
+	return True
+
+
+   #Python 내장기능 적용
+   def is_planindrome(string):
+	return string == string[::-1]
+
+   
+   #Lambda 
+   is_palindrome = lambda x: x == x[::-1]
+
+
+```
+
+ubuntu 1.4.04 verison pyenv, virtualenv, autoenv _ project 2-3 만든 후 activate 여부 확인 
+PEP8 문서를 읽어오기, 스타일 가이드에 맞게 작성할 수 있게 하기
+
 
