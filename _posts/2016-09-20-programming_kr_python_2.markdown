@@ -15,6 +15,7 @@ permalink: /programming_kr/python_2
 
 ``` python
 
+#1번 문제
 def get_even_list(n):
     result = []
     n = 100
@@ -25,6 +26,18 @@ def get_even_list(n):
     return result
 
 print(get_even_list(100))
+
+
+#2번 문제
+def is_even(num):
+    return True if num%2 == 0 else False
+
+returnList = []
+
+for i in range(100)[1::]:
+    returnList.append(i) if is_even(i) else False
+
+print(returnList)
 
 
 # 한줄로 if절 해결하기
@@ -55,6 +68,25 @@ for i in range(n):
         result3.append(element)
 
 print(result3)
+
+
+#함수 형태로 만들기
+def insert_data(list1, list2):
+
+    returnList = []
+    paramTuple = (list1, list2)
+
+    for i in range(100)[1::]:
+        element = ""
+        for p in paramTuple:
+            name, num = p
+            element+= name if (i)%num==0 else ""
+        returnList.append(element)
+
+    return returnList
+
+print(insert_data(("fast", 3), ("campus",5)))
+
 
 
 
@@ -112,19 +144,69 @@ print(get_awesome_list(100, (3, "fast"), (5, "campus")))
 
 <br>
 
-### List Comprehension
+
+### Functional Programming
+1. Lambda
+2. Labmda Operator = map, filter, reduce
 
 ``` python
 
+# map - element에 대해서 동일한 함수를 적용
 
-# get_sum
+def get_sum(paramList):
+    sum = 0;
+    for i in paramList:
+        sum+=i
+    return sum
 
 
-# get_max
+def get_max(paramList):
+    max = paramList[0]
+    for i in paramList:
+            max = i if(max<i) else max
+    return max
 
 
+def double(x):
+    return x * 2
+print(list(map(double, range(100))))
 
+def checkNum(n):
+    return n if (n+1) % 3 else ""
+print(list(map(checkNum, range(100))))
+
+
+# ... fast
+
+def checkFast(n):
+    return "fast" if (n+1) % 3 == 0  else ""
+print(list(map(checkFast, range(100))))
+
+
+# Lambda Operator
+print(list(map(lambda x : x*2, range(100) ) ) )
+print(list(
+        map(
+           lambda x: "fast" if (x+1)%3==0 else ""
+        , range(100) )
+       ) )
+
+
+# List Comprehension
+# [1,2,3]
+# [___________ for ______ in _________] # == MAP
+
+print([i for i in range(5)])
+
+print([i*2 for i in range(5)])
+
+print(["fast" if (i+1)%3==0 else "" for i in range(100)])
 
 ```
+
+
+### 추가 의문사항
+
+1. Reflection 가능여부 확인하기
 
 
