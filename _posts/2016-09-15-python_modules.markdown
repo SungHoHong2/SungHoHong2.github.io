@@ -2,7 +2,7 @@
 published: true
 title: Learning about Python modules
 layout: post
-category: programming
+categories: programming, python
 permalink: /programming/python_module
 ---
 
