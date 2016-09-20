@@ -149,6 +149,11 @@ print(get_awesome_list(100, (3, "fast"), (5, "campus")))
 1. Lambda
 2. Labmda Operator = map, filter, reduce
 
+
+<br>
+
+### Map
+
 ``` python
 
 # map - element에 대해서 동일한 함수를 적용
@@ -204,9 +209,165 @@ print(["fast" if (i+1)%3==0 else "" for i in range(100)])
 
 ```
 
+<br>
+
+### Filter
+
+range(1, 10+1) 제곱 (1,4 .... 100 ) 중에서 50 보다 큰 수만 리스트
+
+``` python
+
+# 1 for
+# 2 lambda
+# 3 list comprehension
+
+def get_positive(elements):
+    returnList = []
+    for item in elements:
+        returnList.append(item) if item>=0 else False
+
+    return returnList
+
+
+#print get_positive([-34,34,55,22,-23])
+
+
+# Filter
+#print list(filter(lambda x: x>0, [-1,32,4,3,-123]))
+#print [ i for i in [-2, 4, 5, -2] if i>0 ]
+
+
+# for
+returnList = []
+for item in range(1,10+1):
+    returnList.append(item**2) if item**2 > 50 else False
+
+print returnList
+
+
+# lambda
+print map(lambda y:y**2, filter(lambda x : x**2>50,range(1,10+1)))
+
+
+# comprehension
+print [i**2 for i in range(1,10+1) if i**2> 50 ]
+
+
+
+```
+
+<br>
+
+### Reduce
+
+``` python
+
+# from functools import reduce
+
+
+# get_sum
+reduce(lambda x, y : x + y, range(10))
+
+
+# get_max
+reduce(lambda x, y : x if x > y else y
+        , [4,34,33,2,2] )
+
+
+
+# get means
+
+data = [
+      {"rent" : 50, "deposit" : 1000}
+    , {"rent" : 60, "deposit" : 2000}
+    , {"rent" : 90, "deposit" : 3000}
+]
+
+sum_rent = 0
+sum_deposit = 0
+
+rent_list = []
+deposit_list = []
+
+for item in data:
+    sum_rent+= item['rent']
+    sum_deposit+= item['deposit']
+
+
+print( sum_rent / len(data) )
+print( sum_deposit / len(data) )
+
+result = reduce(
+        lambda x,y : {"rent" : x["rent"]+ y["rent"],  "deposit" : x["deposit"]+ y["deposit"]}
+      , data
+)
+
+```
+
+
+### 응용 예제 (Pack, Unpack)
+
+``` python
+
+# pack, unpack
+
+def hello(*args):
+    print(args)
+
+hello(1,3,4)
+
+hello([3,4,5,4])
+
+hello(*[3,4,5,4])
+
+def hello(*args, **kargs):
+    print(args)
+    print(kargs)
+
+hello()
+
+
+# basic
+def get_awesome_list(n, rule1, rule2):
+        result =  []
+        for i in range(n):
+            element = ""
+            for rule in [rule1, rule2]:
+                div, text = rule
+                element += text if (i+1)%div == 0 else ""
+            result.append(element)
+        return result
+
+print(get_awesome_list(100, (3, "fast"), (5, "campus")))
+
+
+# List Comprehension
+def get_awesome_list(n, *args):
+    return [ "".join([rule[1] if (i+1)%rule[0] == 0 else "" for rule in args ])
+             for i in range(n)
+           ]
+
+print(get_awesome_list(100, (3, "fast"), (5, "campus")))
+
+
+```
+
+### 과제
+
+1. lambda get_awesome_list
+2. get_snail(n)
+
+if n = 3, 4, 5, 6
+
+<br> [1,2,3]
+<br> [8,9,4]
+<br> [7,6,5]
+
+
 
 ### 추가 의문사항
 
-1. Reflection 가능여부 확인하기
+1. Reflection 기능
+2. 무한 argument 가능하도록 만ㄷ르기
 
 
