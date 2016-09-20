@@ -3,7 +3,7 @@ published: true
 title: 파이썬 기초 1일차
 layout: post
 category: programming_kr
-permalink: /programming/naver/python
+permalink: /programming_kr/python_1
 ---
 
 
