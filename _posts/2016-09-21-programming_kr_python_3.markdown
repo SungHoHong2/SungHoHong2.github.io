@@ -56,6 +56,8 @@ print(get_multiply_by(2)(100))
 ```
 
 
+<br> 
+
 ### Decorator 
 
 함수를 input으로 받아서 새로운 함수를 만들어서 리턴하는 것 
@@ -115,7 +117,209 @@ hello("안수찬")
 ```
 
 
-### 데이터 분석 
+<br>
+
+### List, Dict 예제 
+1. 배열 타입을 입력할 것 ["fast", "campus", "fast", "campus", "school", "fast", "fast"]
+2. for 
+3. lambda 
+4. comprehensive 
+5. 가장 많이 누적된 점수 순서로 출력할 것
+ 
+```python
+
+data = ["fast", "campus", "fast", "campus", "school", "fast", "fast"]
 
 
+# fast      ====
+# campus    =
+# school    =
+
+
+def parameter(arg):
+
+    argdict = {
+        "fast" : 0,
+        "campus" : 0,
+        "school" : 0
+    }
+    
+    for i in data:
+        argdict[i] +=1
+
+    for key, value in argdict.items():
+        rtn = key+'\t'
+        rtn+=''.join(['#' for i in range(value)])
+        print(rtn)
+    return argdict
+
+parameter(data)
+
+
+data = ["fast", "campus", "fast", "campus", "school", "fast", "fast"]
+
+
+# fast      ====
+# campus    =
+# school    =
+
+
+def parameter(arg):
+
+    argdict = {
+        "fast" : 0,
+        "campus" : 0,
+        "school" : 0
+    }
+
+    for i in data:
+        argdict[i] +=1
+
+    for key, value in argdict.items():
+        rtn = key+'\t'
+        rtn+=''.join(['#' for i in range(value)])
+        #print(rtn)
+    return argdict
+
+parameter(data)
+
+
+
+ele = ["fast", "campus", "fast", "campus", "school", "fast", "fast"]
+
+def histogram(elements):
+    hist = {}
+    for key in elements:
+        hist[key] = 0
+
+    for key in elements:
+        hist[key]+=1
+
+    for key, value in hist.items():
+        rtn = "{key}{space}{histogram}".format(key=key, space= " "*(10-len(key)),histogram="#"*value)
+    #   print(rtn)
+
+
+    #list comprehension
+    print("\n".join(["{key}{space}{histogram}".format(key=key, space= " "*(10-len(key)),histogram="#"*value) for key, value in hist.items()]))
+
+
+    #lambda
+    print("\n".join(list(map(lambda key:"{key}{space}{histogram}".format(key=key, space= " "*(10-len(key)), histogram="#"*hist[key]), hist))))
+
+
+    #sort
+    print(sorted(hist))
+    print(sorted(hist, key=lambda key: hist[key]))
+    print(sorted(hist, key=lambda key: hist[key])[::-1])
+    
+print(histogram(ele))
+
+
+```
+
+
+<br>
+
+### 피보나치 수열 
+1. 숫자를 입력할 것 
+2. 해당 숫자만큼의 마지막 피보나치 수자를 리턴할 것 
+3. for 문 
+4. recursive 
+
+``` python
+
+# 0, 1, 1, 2, 3, 5, 8
+def fibo(n):
+    #n 번째 피보나치 수열을 return
+
+    first, second = (0, 1)
+    rtn = 0
+    #print(first)
+    #print(second)
+
+    for i in range(n):
+        temp = second
+        second = second + first
+        first = temp
+        #print(second)
+        rtn = second
+    return rtn
+
+print(fibo(10))
+
+```
+
+<br>
+
+### Recursive 
+
+``` python
+
+def fibo_recur(n):
+    return n if n < 2 else fibo_recur(n-1)+fibo_recur(n-2)
+
+print(fibo_recur(10))
+
+
+
+
+
+def factorial(n):
+    if n <= 1:
+        return 1
+    return n * factorial(n-1)
+    
+    
+# f(5) = f(4) + f(3)
+#      = (f(3) + f(2)) + (f(2) + f(1))
+#      = ((f(2) + f(1))) ...
+
+```
+
+<br>
+
+### 동적 계획법 Memoization 
+
+- 결과값을 저장해두는 방법 - memoization
+- 동적 계획법 - 기억하며 풀기
+- recursive로 작성된 함수에다가 decoration을 사용해서 memoization 적용하기
+
+``` python
+
+def fibo_recur(n):
+    return n if n < 2 else fibo_recur(n-1)+fibo_recur(n-2)
+
+__fibo_recursive_cache = {}
+
+def fibo_cache(n):
+    if n in __fibo_recursive_cache:
+        return __fibo_recursive_cache[n]
+    else:
+        result = n if n < 2 else fibo_recur(n - 1) + fibo_recur(n - 2)
+        __fibo_recursive_cache[n] = result
+        return result
+
+print(fibo_cache(10))
+
+
+def memoize(func):
+    __cache = {}
+    def wrapper(*args):
+        print(__cache)
+        if args in __cache:
+            return __cache[args]
+        else:
+            __cache[args]= func(*args)
+            return __cache[args]
+    return wrapper
+
+
+@memoize
+def fibo_recur(n):
+    return n if n < 2 else fibo_recur(n-1)+fibo_recur(n-2)
+
+print(fibo_recur(10))
+
+```
 
