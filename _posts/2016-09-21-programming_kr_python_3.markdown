@@ -447,8 +447,4 @@ print(a.get_area())
 print(b.get_area())
 print(a.is_bigger_than(b))
 
-
-# acmipc
-# 알고스팟
-
 ```
