@@ -354,20 +354,58 @@ print(get_awesome_list(100, (3, "fast"), (5, "campus")))
 
 ### 과제
 
-1. lambda get_awesome_list
-2. get_snail(n)
-
-if n = 3, 4, 5, 6
-
-<br> [1,2,3]
-<br> [8,9,4]
-<br> [7,6,5]
+``` python
 
 
+#숙제1
+def get_awesome_list_lambda(n, *args):
 
-### 추가 의문사항
+    args = [ arg for arg in args]
+    #print(args)
+    #print(list(filter(lambda y : y[0]==3, args)))
+    return list(map(lambda x : "".join(list(map(lambda y : y[1] if(x+1)%y[0]==0 else "", args))) , range(n)))
 
-1. Reflection 기능
-2. 무한 argument 가능하도록 만ㄷ르기
+
+#print(get_awesome_list_lambda(100, (3, "fast"), (5, "campus")))
+
+
+
+#숙제2
+def snail(n):
+
+    snail = [[0] * n for x in range(n)]
+
+    x = 0
+    y = 0
+
+    count = 1
+    shield = 0
+
+    for i in range(n * n):
+        snail[y][x] = count
+        count += 1
+
+        if x < n - 1 - shield and y == shield:
+            x += 1
+        elif x == n - 1 - shield and y < n - 1 - shield:
+            y += 1
+        elif x > shield and y == n - 1 - shield:
+            x -= 1
+        elif x == shield and y == n - 1 - shield:
+            shield += 1
+            y -= 1
+        elif x == shield - 1 and y > shield:
+            y -= 1
+
+
+    for i in range(n):
+        row = ""
+        for j in range(n):
+            row += " "+str(snail[i][j])
+        print(row)
+
+snail(5)
+
+```
 
 
