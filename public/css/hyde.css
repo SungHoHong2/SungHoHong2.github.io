@@ -231,7 +231,7 @@ a.sidebar-nav-item:focus {
 
 @media (min-width: 929px) {
   .content {
-    max-width: 822px;
+    max-width: 100%;
     margin-left: 375px;
     margin-right: 32px;
     }
@@ -240,7 +240,7 @@ a.sidebar-nav-item:focus {
 
 @media (min-width: 1024px) {
   .content {
-    max-width: 822px;
+    max-width: 100%;
     margin-left: 375px;
     margin-right: 64px;
   }
