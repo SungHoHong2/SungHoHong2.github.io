@@ -203,7 +203,7 @@ a.sidebar-nav-item:focus {
   }
 }
 
-@media (min-width: 1030px) {
+@media (min-height: 1030px) {
   .sidebar-sticky {
     position: absolute;
     right:  16px;
