@@ -53,16 +53,17 @@ d4.swim()
 
 ```
 
-
+<br>
 
 ### 상속
 
 1. 삼각형 사각형 
 2. width, height를 가진다. 
 3. area = w * h / 2, area = w * h 
- 
+  
+    
 ``` python
- 
+
  class Shape:
     def __init__(self, width, height):
         self.width = width
