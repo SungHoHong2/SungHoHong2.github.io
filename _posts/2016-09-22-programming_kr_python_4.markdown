@@ -61,34 +61,9 @@ d4.swim()
 2. width, height를 가진다. 
 3. area = w * h / 2, area = w * h 
   
-    
 ``` python
 
- class Shape:
-    def __init__(self, width, height):
-        self.width = width
-        self.height = height
-
-    def is_bigger_than(self, other):
-        return True if self.area() > other.area() else False
-
-
-class Rect(Shape):
-    def area(self):
-        return self.width * self.height
-
-
-class Tri(Shape):
-    def area(self):
-        return (self.width * self.height) / 2
-
-
-r1 = Rect(10,20)
-t1 = Tri(10,20)
-
-print(r1.area())
-print(t1.area())
-print(r1.is_bigger_than(t1))
+test
  
 ```
 
