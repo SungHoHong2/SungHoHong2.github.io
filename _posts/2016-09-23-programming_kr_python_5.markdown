@@ -95,10 +95,14 @@ for pages in result:
 ```
 
 
+<br>
+
 ### Iterator 
 
 1. Django Generator를 만들 떄 사용된다. 
 2. Iterable의 뜻은 반복하다 
+3. iter() : iterator가 조회된다.
+4. next() : element가 조회된다. 
 
 - List :: element
 - Dict :: key
@@ -122,6 +126,76 @@ print(animals_iterator.__next__())
 print(next(animals_iterator))
 
 #elements - > element iterator로 바꾼 다음에 -> next로 조회한다.
+
+
+
+# Iterator 생성 -> __next__
+# Iterable -> __iter__
+
+class myrange:
+    def __init__(self, n):
+        self.i, self.n = (0, n)
+
+    def __iter__(self):
+        return self
+
+    def __next__(self):
+        if self.i < self.n:
+            i = self.i
+            self.i += 1
+            return i
+        else:
+            raise StopIteration()
+
+
+#for i in myrange(5):
+#    print(i)
+
+#for i in range(5):
+#    print(i)
+
+
+m1 = myrange(10)
+
+# 데이터 조회
+print(list(m1))
+
+# 데이터 손실
+print(list(m1))
+
+
+class myrange_basic:      #iterable
+    def __init__(self, n):
+        self.n = n
+
+    # 데이터가 중도에 소실되는 것을 방지
+    def __iter__(self):
+        return myrange_iterator(self.n)
+
+
+class myrange_iterator:   #iterator
+    def __init__(self, n):
+        self.i, self.n = (0, n)
+
+    def __iter__(self):
+        return self
+
+    def __next__(self):
+        if self.i < self.n:
+            i = self.i
+            self.i += 1
+            return i
+        else:
+            raise StopIteration()
+
+
+m1 = myrange_basic(10)
+
+# 데이터 조회
+print(list(m1))
+
+# 데이터 손실없음
+print(list(m1))
 
 ```
 

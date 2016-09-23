@@ -1,31 +1,72 @@
-import requests
-from bs4 import BeautifulSoup
+# Iterator 생성 -> __next__
+# Iterable -> __iter__
 
-response = requests.get("https://search.naver.com/search.naver?where=post&sm=tab_jum&ie=utf8&query=%ED%8C%8C%EC%9D%B4%EC%8D%AC")
-bs = BeautifulSoup(response.text, "html.parser")
+class myrange:
+    def __init__(self, n):
+        self.i, self.n = (0, n)
 
-post_elements = bs.select("ul#elThumbnailResultArea li.sh_blog_top")
-#print(len(post_elements))
+    def __iter__(self):
+        return self
 
-#HEADERS에 들어갈 내용
-IPAD_USER_AGENT = 'Mozilla/5.0 (iPad; U; CPU OS 3_2 like Mac OS X; en-us) AppleWebKit/531.21.10 (KHTML, like Gecko) Version/4.0.4 Mobile/7B334b Safari/531.21.10'
-response = requests.get(
-    "http://money.cnn.com/2016/08/30/technology/obama-wired-magazine/index.html"
-    , headers = {
-       "User-Agent": IPAD_USER_AGENT
-    }
-)
-
-print(response.text)
+    def __next__(self):
+        if self.i < self.n:
+            i = self.i
+            self.i += 1
+            return i
+        else:
+            raise StopIteration()
 
 
+#for i in myrange(5):
+#    print(i)
+
+#for i in range(5):
+#    print(i)
+
+
+m1 = myrange(10)
+
+# 데이터 조회
+print(list(m1))
+
+# 데이터 손실
+print(list(m1))
 
 
 
 
+class myrange_basic:      #iterable
+    def __init__(self, n):
+        self.n = n
+
+    # 데이터가 중도에 소실되는 것을 방지
+    def __iter__(self):
+        return myrange_iterator(self.n)
 
 
+class myrange_iterator:   #iterator
+    def __init__(self, n):
+        self.i, self.n = (0, n)
 
+    def __iter__(self):
+        return self
+
+    def __next__(self):
+        if self.i < self.n:
+            i = self.i
+            self.i += 1
+            return i
+        else:
+            raise StopIteration()
+
+
+m1 = myrange_basic(10)
+
+# 데이터 조회
+print(list(m1))
+
+# 데이터 손실없음
+print(list(m1))
 
 
 
