@@ -126,6 +126,3 @@ print(next(animals_iterator))
 ```
 
 
-
-
-dd
