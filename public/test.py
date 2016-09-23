@@ -1,74 +1,26 @@
-# Iterator 생성 -> __next__
-# Iterable -> __iter__
+import requests
+from bs4 import BeautifulSoup
 
-class myrange:
-    def __init__(self, n):
-        self.i, self.n = (0, n)
-
-    def __iter__(self):
-        return self
-
-    def __next__(self):
-        if self.i < self.n:
-            i = self.i
-            self.i += 1
-            return i
-        else:
-            raise StopIteration()
-
-
-#for i in myrange(5):
-#    print(i)
-
-#for i in range(5):
-#    print(i)
-
-
-m1 = myrange(10)
-
-# 데이터 조회
-print(list(m1))
-
-# 데이터 손실
-print(list(m1))
+import json
+import pandas as pd
 
 
 
+response = requests.get(
+    "https://www.yogiyo.co.kr/api/v1/restaurants-geo/?items=20&lat=37.5157252&lng=127.02130830000002&order=rank&page=0&search=&zip_code=137030",
+    headers={
+        "X-ApiKey": "iphoneap",
+        "X-ApiSecret": "fe5183cc3dea12bd0ce299cf110a75a2",
+    }
+)
 
-class myrange_basic:      #iterable
-    def __init__(self, n):
-        self.n = n
+#yogiyo = json.loads(response.text)
+yogiyo = response.json()
+rtn = pd.DataFrame(yogiyo.get("restaurants"))
 
-    # 데이터가 중도에 소실되는 것을 방지
-    def __iter__(self):
-        return myrange_iterator(self.n)
+rtn.to_excel("yogiyo.xls")
 
-
-class myrange_iterator:   #iterator
-    def __init__(self, n):
-        self.i, self.n = (0, n)
-
-    def __iter__(self):
-        return self
-
-    def __next__(self):
-        if self.i < self.n:
-            i = self.i
-            self.i += 1
-            return i
-        else:
-            raise StopIteration()
-
-
-m1 = myrange_basic(10)
-
-# 데이터 조회
-print(list(m1))
-
-# 데이터 손실없음
-print(list(m1))
-
-
+print(rtn)
 
 
 
