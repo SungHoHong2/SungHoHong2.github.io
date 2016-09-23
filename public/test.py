@@ -1,31 +1,34 @@
-# web crawling
 import requests
 from bs4 import BeautifulSoup
 
-response = requests.get("http://naver.com")
+response = requests.get("https://search.naver.com/search.naver?where=post&sm=tab_jum&ie=utf8&query=%ED%8C%8C%EC%9D%B4%EC%8D%AC")
+bs = BeautifulSoup(response.text, "html.parser")
 
-#print(response.text)
-#print("윤보미" in response.text)
+post_elements = bs.select("ul#elThumbnailResultArea li.sh_blog_top")
+#print(len(post_elements))
 
-# tag= ol id = realrank
-# 10 lists inside the tag
-# css selector ol #realrank li
+#HEADERS에 들어갈 내용
+IPAD_USER_AGENT = 'Mozilla/5.0 (iPad; U; CPU OS 3_2 like Mac OS X; en-us) AppleWebKit/531.21.10 (KHTML, like Gecko) Version/4.0.4 Mobile/7B334b Safari/531.21.10'
+response = requests.get(
+    "http://money.cnn.com/2016/08/30/technology/obama-wired-magazine/index.html"
+    , headers = {
+       "User-Agent": IPAD_USER_AGENT
+    }
+)
 
-# tag 파일들을 보기 좋게 parsing
-result = BeautifulSoup(response.text)
-
-# ol tag만 별도로 추출
-elements = result.select("ol#realrank li")
-
-
-#element = elements[0]
-#print(element.select_one("a").attrs["title"])
-print([element.select_one("a").attrs["title"] for element in elements[:-1:]])
+print(response.text)
 
 
-# 1. 정적인 사이트 - 네이버 홈페이지
-# 2. 동적인 사이트 - client에서 data가 rendering, ajax 등으로 javascript로 data를 받는다.
-# 3. 국내 사이트 (Javascript) - 사내 인트라넷 등 등
-# 4. 한국형 사이트 : iFrame - 네이버 카페, 옛날 사이트
+
+
+
+
+
+
+
+
+
+
+
 
 
