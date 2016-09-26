@@ -93,6 +93,8 @@ permalink: /programming_kr/html_5
 - 클래스는 전체에 적용, id는 하나만 선언
 
 
+<br>
+
 
 ### CSS 호출 방식
 
@@ -166,17 +168,16 @@ section > ul { color : blue }
 /* 인접 형제 선택자 */
 /* 우선순위가 같은 경우에는 가장 마지막에 있는 CSS가 실행된다. */
 h1+ul{ background: Azure }
-h1 ul{ background: Azure; color: DarkBlue }
+h1~ul{ background: Azure; color: DarkBlue }
 
 /* 속성 선택자 */
-
 CSS[attribute~="value"] /* selector is used to select elements with an attribute value containing a specified word. */
                         /* title="flower", title="summer flower", and title="flower new", but not title="my-flower" or title="flowers".*/
 CSS[attribute|="value"] /* selector is used to select elements with the specified attribute starting with the specified value. */
                         /* class="top-text" */
-CSS [attribute^="value"] /* selector is used to select elements whose attribute value begins with a specified value. */
-CSS [attribute$="value"] /* selector is used to select elements whose attribute value ends with a specified value. */
-CSS [attribute*="value"] /* The [attribute*="value"] selector is used to select elements whose attribute value contains a specified value. */
+CSS[attribute^="value"] /* selector is used to select elements whose attribute value begins with a specified value. */
+CSS[attribute$="value"] /* selector is used to select elements whose attribute value ends with a specified value. */
+CSS[attribute*="value"] /* The [attribute*="value"] selector is used to select elements whose attribute value contains a specified value. */
 
 
 E:link
@@ -188,5 +189,66 @@ E:first-line /* 첫번째 줄 */
 E:first-letter /* 첫번쨰 글짜 */
 E:before /* indent */
 E:after /* 마지막 부분 indent */
+
+```
+
+<br>
+
+### CSS 순서도
+
+1. important
+1. inline style (아예 태그 안에 스타일 입력하는 것)
+2. ID  
+3. Class
+4. Tag
+
+```css
+
+  p {
+    font-size: 30px !important;
+    color : green !important;
+  }
+
+```
+
+<br>
+
+### CSS 서체
+
+만약 컴퓨터에 돋움이 존재하지 않으면 특정 서체가 나타나지 않는다. 따라서 최악의 경우 여러가지 가지수를 지정해줘야 한다.
+
+```css
+
+  /* 서체 지정 */
+  body{ font-family: "돋움" }
+
+  /* 글자 크기 */
+  /* px, em 부모의 크기에 * 배율 */
+  body { font-size : 14px; }
+  h1 { font-size: 28px(2em); /* 2*14px */ }
+
+  /* 글자 스타일 */
+  body{ font-style: italic }
+
+  /* 줄 길이 */
+  body{ line-height: 10px; } /* default 값은 em으로 입력되어 있다. */
+
+  /* 문자 정렬 */
+  body{text-align: left; text-align: justify}
+
+  /* 들여쓰기 */
+  body{text-indent: 10px; }
+
+  /* 글자 간격 */
+  p{letter-spacing: 10px}
+
+  /* 자간 간격 */
+  p{word-spacing: 12px }
+
+  /* 수직 정렬 */
+  div{vertical-align: top;}
+
+  /* 띄어쓰기 적용 */
+  div{white-space: pre;}
 
 ```
