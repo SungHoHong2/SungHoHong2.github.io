@@ -37,10 +37,25 @@ permalink: /programming_kr/html_5
     <title> Document </title>
 </head>
 <body>
+
+    <!-- 블록 요소 -->
     <h1>블록요소</h1>
     <p>p요소는 블록 형태입니다.</p>
     <div>div 요소 역시 블록속성입니다.</div>
+
+    <!-- 인라인 태그 -->
+    <strong> Strong 요소 </strong>
+    <a> a 요소 </a>
+    <span> span 요소 </span>
+
 </body>
 </html>
 
 ```
+
+### 여러 가지 요소
+
+| 태그 | 내용 |
+|----|----|
+| p 태그  | 문단 |
+| br 태그 | 줄 바꾸기 |
