@@ -1,5 +1,21 @@
-#body-title2{
-    font-size: 100px;
-    font-weight:bold;
-    color: green;
-}
+h1~ul{ background: Cyan; color: green }
+h1+ul{ background: Yellow; color: DarkBlue}
+
+a[href="naver.com"]{color: green}
+a[href~="abc"]{color: green}
+a[href^="naver.com"]{color: cyan}
+a[href$="sdf"]{color: grey}
+a[href*="fabc"]{color: yellow}
+a{ display : block }
+a:hover{color: red}
+a:visited{color: red}
+
+
+/*
+<a href=""></a>
+<a href="naver.com"></a>
+<a href="value abc"></a>
+<a href="abcdefg"></a>
+<a href="abc-sdf"></a>
+<a href="asdfabcsef"></a>
+*/

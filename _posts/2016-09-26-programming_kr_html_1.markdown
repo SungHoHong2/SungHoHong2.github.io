@@ -80,7 +80,9 @@ permalink: /programming_kr/html_5
 | html:5 + tab | 자동 html 틀 생성 |
 | h3 + tab | 자동  h3 생성 |
 | ol>li + tab | 자동 ol과 li 태그 생성 |
-
+| p#body + tab | 자동으로 p 태그와 아이디 body 생성 |
+| a[href=1][content=1]*4 | a 태그에 괄호 안에 있는 속성값들을 총 4개 생성 |
+| a{click me } | a 태그 안에 텍스트를 입력 |
 
 <br>
 
@@ -92,7 +94,7 @@ permalink: /programming_kr/html_5
 
 
 
-### CSS란
+### CSS 호출 방식
 
 마크업 언어가 실제로 표시되는 방법을 기술하는 언어, 레이아웃과 스타일을 정의할 때 주로 사용. 'Cascading Style Sheet'라고 한다.
 
@@ -133,5 +135,58 @@ permalink: /programming_kr/html_5
   <div id = 'body-title2'>howdy this is the css </body>
 </body>
 </html>
+
+```
+
+<br>
+
+### CSS 선택자
+
+```css
+
+/* 전체 선택자 */
+*{ padding: 0; margin: 0;}
+
+/* 타입 선택자 */
+h1{ color : red; }
+p{ color : blue; }
+
+/* 클래스 선택자 */
+.section{ color: #333 }
+p.section-title{ color : #efefef}
+
+/* ID값 입력 */
+#index-title { font-size : 18px; }
+p#index-description{ font-size: 12px; color : #999;}
+
+/* 하위 선택자 */
+section ul {color : red }
+section > ul { color : blue }
+
+/* 인접 형제 선택자 */
+/* 우선순위가 같은 경우에는 가장 마지막에 있는 CSS가 실행된다. */
+h1+ul{ background: Azure }
+h1 ul{ background: Azure; color: DarkBlue }
+
+/* 속성 선택자 */
+
+CSS[attribute~="value"] /* selector is used to select elements with an attribute value containing a specified word. */
+                        /* title="flower", title="summer flower", and title="flower new", but not title="my-flower" or title="flowers".*/
+CSS[attribute|="value"] /* selector is used to select elements with the specified attribute starting with the specified value. */
+                        /* class="top-text" */
+CSS [attribute^="value"] /* selector is used to select elements whose attribute value begins with a specified value. */
+CSS [attribute$="value"] /* selector is used to select elements whose attribute value ends with a specified value. */
+CSS [attribute*="value"] /* The [attribute*="value"] selector is used to select elements whose attribute value contains a specified value. */
+
+
+E:link
+E:visited
+E:active
+E:hover
+E:focus  /* input 입력 가능한 상태일 때 */
+E:first-line /* 첫번째 줄 */
+E:first-letter /* 첫번쨰 글짜 */
+E:before /* indent */
+E:after /* 마지막 부분 indent */
 
 ```
