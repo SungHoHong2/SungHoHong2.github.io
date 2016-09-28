@@ -83,6 +83,7 @@ permalink: /programming_kr/html_5
 | p#body + tab | 자동으로 p 태그와 아이디 body 생성 |
 | a[href=1][content=1]*4 | a 태그에 괄호 안에 있는 속성값들을 총 4개 생성 |
 | a{click me } | a 태그 안에 텍스트를 입력 |
+| col#col-$*5 | 아이디 값에 자동으로 번호 매김 |
 
 <br>
 
