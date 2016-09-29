@@ -6,7 +6,7 @@ category: artworks
 permalink: /artworks/
 ---
 
-### Undertale Artwork2
+### Undertale Artwork
 
 <img width="100%" src = "../public/image/project_5.png">
 <img width="100%" src = "../public/image/project_6.png">
