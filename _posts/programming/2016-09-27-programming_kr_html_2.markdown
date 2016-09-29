@@ -165,7 +165,86 @@ button.btn-join
 
 ```html
 
+<!DOCTYPE html>
+<html lang="ko">
+<head>
+  <meta charset="UTF-8">
+  <meta name="viewport" content="width=device-width, initial-scale=1.0">
+  <meta http-equiv="X-UA-Compatible" content="ie=edge">
+  <title>Document</title>
+  <link rel="stylesheet" href="bootstrap/css/bootstrap.min.css">
+  <link rel="stylesheet" href="css/index.min.css">
+</head>
+<body>
+
+<!-- 상단의 네비게이션 (메뉴바) -->
+<nav class="navbar navbar-default navbar-no-margin">
+    <!-- 넹비게이션 바의 내용 -->
+    <div class="container-fluid">
+
+        <!-- 상호명 아이콘 -->
+         <div class="navbar-header">
+           <a href="" class="navbar-brand">
+             <img src="images/logo.png">
+           </a>
+         </div>
 
 
+        <!-- 네비게이션 정보를 오른쪽 정렬로 설정해준다 -->
+        <ul class="nav navbar-nav navbar-right">
+          <li><a href="">방 검색</a></li>
+          <li><a href="">관심목록</a></li>
+          <li><a href="">방등록</a></li>
+          <li><a></a></li>
+          <li><a href="">공인중개사 가입</a></li>
+          <li><a href="">회원가입 및 로그인</a></li>
+        </ul>
+    </div>
+</nav>
+
+<!-- 본문 -->
+<!-- 상단 이미지 -->
+<div class="index-content">
+
+  <div class="jumbotron index-image-container">
+    <div class="caption-container">
+        <p class="caption-top">850만 며이 선택한 대표 부동산 앱</p>
+        <p class="caption-bottom">우리, 살고 싶은 데서 살자</p>
+    </div>
+  </div>
+</div>
+</body>
+</html>
+
+```
+
+```css
+
+.index-content
+  .index-image-container
+    background-image: url(../images/index-bg.jpg)
+    height: 678px
+    background-position:  50% top
+    background-repeat: no-repeat
+    background-color: black
+    position: relative
+
+.navbar-no-margin
+  margin-bottom: 0px
+
+.caption-container
+  color: white
+  position: absolute
+  left: 50%
+  top: 160px
+  text-align: right
+  margin-left: -420px
+
+  .caption-top
+    font-size: 22px
+    margin-bottom: 0px
+
+  .caption-bottom
+    font-size: 36px
 
 ```
