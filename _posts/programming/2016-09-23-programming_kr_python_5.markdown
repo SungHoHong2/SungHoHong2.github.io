@@ -2,7 +2,7 @@
 published: true
 title: 파이썬 중급 5일차
 layout: post
-category: programming_kr
+category: programming
 permalink: /programming_kr/python_5
 ---
 
@@ -43,7 +43,7 @@ for post in post_elements:
 
 <br>
 
-### Daum 블로그 페이지별 Crawling 
+### Daum 블로그 페이지별 Crawling
 
 ``` python
 
@@ -97,18 +97,18 @@ for pages in result:
 
 <br>
 
-### Iterator 
+### Iterator
 
-1. Django Generator를 만들 떄 사용된다. 
-2. Iterable의 뜻은 반복하다 
+1. Django Generator를 만들 떄 사용된다.
+2. Iterable의 뜻은 반복하다
 3. iter() : iterator가 조회된다.
-4. next() : element가 조회된다. 
+4. next() : element가 조회된다.
 
 - List :: element
 - Dict :: key
 - Tuple :: element
 - Set :: element
-- String :: char(str) 
+- String :: char(str)
 
 ```python
 
@@ -201,7 +201,7 @@ print(list(m1))
 
 <br>
 
-### Generator 
+### Generator
 
 ```python
 
@@ -249,7 +249,7 @@ print(next(g))
 
 <br>
 
-### eval 
+### eval
 
 ```python
 
@@ -380,4 +380,3 @@ rtn.to_excel("yogiyo.xls")
 print(rtn)
 
 ```
-

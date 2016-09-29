@@ -2,7 +2,7 @@
 published: true
 title: HTML 초급 2일차
 layout: post
-category: programming_kr
+category: programming
 permalink: /programming_kr/html_5
 ---
 

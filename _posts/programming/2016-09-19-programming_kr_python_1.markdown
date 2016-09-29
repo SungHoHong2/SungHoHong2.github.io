@@ -2,56 +2,56 @@
 published: true
 title: 파이썬 기초 1일차
 layout: post
-category: programming_kr
+category: programming
 permalink: /programming_kr/python_1
 ---
 
 
 ### Jupyter
 
-파이썬을 개발하기 위한 환경 제공 
+파이썬을 개발하기 위한 환경 제공
 
-<br> play.dobest.io/hub/login 
-<br> id: python pwd: 파이썬 
+<br> play.dobest.io/hub/login
+<br> id: python pwd: 파이썬
 
 ### Python 명령어
 
 1. shift + enter : 실행  
 2. dd : 해당 줄이 삭제되는 명령어  
 
-### Python의 장점 
+### Python의 장점
 
-파이썬은 다양한 어플리케이션과 연동이 되고 스크립트 언어이기 때문에 작성이 편하다. 
-<br> Deep Learning, Machine Learning과 같은 데이터분석에도 사용된다. 
-<br> 데이터 분석은 파이썬을 많이 사용하지만 웹프로그래밍 같은 경우는 php, ruby, node.js와 같은 백엔드 개발언어들이 있다. 
-<br> 따라서 back-end 자체에 집중을 하는 것이 중요하고 Python 자체에는 연연해선 안 된다. 
-<br> Interpretor가 바로 해석해서 실행을 하기 떄문에 Script언어라고 부른다. 
+파이썬은 다양한 어플리케이션과 연동이 되고 스크립트 언어이기 때문에 작성이 편하다.
+<br> Deep Learning, Machine Learning과 같은 데이터분석에도 사용된다.
+<br> 데이터 분석은 파이썬을 많이 사용하지만 웹프로그래밍 같은 경우는 php, ruby, node.js와 같은 백엔드 개발언어들이 있다.
+<br> 따라서 back-end 자체에 집중을 하는 것이 중요하고 Python 자체에는 연연해선 안 된다.
+<br> Interpretor가 바로 해석해서 실행을 하기 떄문에 Script언어라고 부른다.
 
 
-### Index 
+### Index
 
 1. 자료형 Data Type
 2. 조건문 Conditional Statement
 3. 반복문 Loops
-4. List Comprehension: Lamda + Lamda Operator 
+4. List Comprehension: Lamda + Lamda Operator
 5. 함수
-6. 클래스 
+6. 클래스
 7. 웹 프로그래밍 기본 프로젝트 python Flask
-8. Crawling(requests, bs4), Data 분석 (Python으로 사용해서 Naver blog 정보 수집 etc) 
+8. Crawling(requests, bs4), Data 분석 (Python으로 사용해서 Naver blog 정보 수집 etc)
 
 <br>
 
 ### 자료형
 
 1. list : 순서허용 중복허용
-2. set : 순서 중복 불허 
-3. dict :  순서 중복 불허 
+2. set : 순서 중복 불허
+3. dict :  순서 중복 불허
 4. tuple : 순서, 중복 허용, 하지면 변할 수 없음
 
 
 ``` python
 
-#number 
+#number
 s = 10
 
 #string
@@ -60,9 +60,9 @@ d = 'howdy'
 #list
 #여러 데이터가 순서있게 들어가면서 중복을 허용하는 자료
 #끝은 항상 -1을 적용한다.
- 
+
 animals = ['dog', 'cat','fish','monkey', 'dog', 'dog']
-animals[0]  # 앞에서부터 검색하기 
+animals[0]  # 앞에서부터 검색하기
 animals[-2] # 뒤에서부터 검색하기
 animals[0:2] # ['dog','cat']
 animals[3:] # ['monkey', 'dog', 'dog']
@@ -80,10 +80,10 @@ student = {
 }
 
 
-#tuple 
-#특수용도로 사용된다. 
-#list와 유사하고 순서와 중복을 허용한다. 
-#변할 수가 없다. (새로 추가 삭제가 불가능하다) 
+#tuple
+#특수용도로 사용된다.
+#list와 유사하고 순서와 중복을 허용한다.
+#변할 수가 없다. (새로 추가 삭제가 불가능하다)
 a, b = (100, 200)
 
 
@@ -94,35 +94,35 @@ set[1,1,2,3,4] #[1,2,3,4]
 
 #중복을 제거하고 리스트로 변경하는 방법
 list(set(animals))
- 
+
 ```
 
-### Loop 
+### Loop
 
-``` python 
+``` python
 
-#static for문 
+#static for문
 for i in range(10):
 	print('hello world')
 
-#관례적으로 임시변수를 사용하지 않으면 
+#관례적으로 임시변수를 사용하지 않으면
 for _ in range(10):
 	print('hello world')
 
 
-#list for문 
+#list for문
 for animal in animals:
 	print(animal)
 
-len(animals) #길이 표현 
+len(animals) #길이 표현
 for animal in range(len(animals)):
 	print(animals[i])
 
 
-#dictionary for문 
+#dictionary for문
 for key in student:
 	print(key+'=>'+student[key])
- 
+
 #student items = tuple을 조회한다.
 for key, item in student.items():
 	print(key+'=>'+item)
@@ -130,7 +130,7 @@ for key, item in student.items():
 
 for i in range(len(students)):
 	student = students[i]
-	
+
 	student_data = {}
 	student_data['name'] = student[0]
         student_data['mail'] = student[1]
@@ -142,8 +142,8 @@ for i in range(len(students)):
 
 ``` python
 
-#양수 음수 0 체크하는 코드 
-my_num = 20 
+#양수 음수 0 체크하는 코드
+my_num = 20
 if my_num > 0:
         print('양수입니다.')
 elif my_num == 0:
@@ -154,23 +154,23 @@ else:
 ```
 
 
-### PEP 
+### PEP
 
 Python Enhancement Proposal = Python Style Guide  
 
 
 ### 개발환경 Setting
 
-1.pyenv - 언어 버전 
+1.pyenv - 언어 버전
 2.virtualenv - 프로젝트 버전
-3.autoenv - 디렉토리별 프로필 (bash profile 유사) 
+3.autoenv - 디렉토리별 프로필 (bash profile 유사)
 
 <br> tmux, screen multiplexer - screen tmux
-<br> Editor - vim, EMACS 
+<br> Editor - vim, EMACS
 <br> Shell - Bash, Zshell(*), Fish
 <br> Shell Script
 
- 
+
 
 ### 파일 입출력
 
@@ -183,7 +183,7 @@ fp.write('Hello World')
 fp.close()
 
 
-# 파일 읽기 
+# 파일 읽기
 fp2 = open("./hello.txt","r")
 fp2.read()
 fp2.close()
@@ -199,13 +199,13 @@ with open("hello.txt","r") as fp:
 with open("../student.csv","r") as fp:
 	data = fp.read() #1 파일 읽기  
 	rows = data.split("\n") #2 newline char(\n) 나누는 작업
-	students = []	
-	
+	students = []
+
 	columns = rows[0].split(',')
 
 	for row in rows[1::]:
 		fields = row.split(',')
-		student = {} 
+		student = {}
 		for column_index in range(len(columns)):
 			field = fields[column_index]
 			column = columns[column_index]
@@ -224,19 +224,19 @@ with open("../student.csv","r") as fp:
 
 ``` python
 
-#split 기능 
+#split 기능
 "dog::cat::fish".split("::")
 
 ",".join(["dog", "cat", "fish"])
 # output = 'dog, cat, fish'
 
 
-#replace 기능 
+#replace 기능
 data.replace("\t", ",")
 
 #format 기능
-"안녕하세요 %s 입니다." %("안수찬") 
-#안녕하세요 안수찬입니다. 
+"안녕하세요 %s 입니다." %("안수찬")
+#안녕하세요 안수찬입니다.
 "안녕하세요, {name} 입니다.".format(name="안수찬")
 
 ```
@@ -248,10 +248,10 @@ data.replace("\t", ",")
 ``` python
 
 def read_scv(filename):
-	print(filename+"을 읽습니다.")	
+	print(filename+"을 읽습니다.")
 
 
-read_scv("hello.txt") 
+read_scv("hello.txt")
 
 
 def print_svc(file_name, seperator=","):
@@ -280,7 +280,7 @@ print(print_svc("../students.csv", ","))
 ### Lamda 익명 함수
 
 
-``` python 
+``` python
 
 double(300) #600
 
@@ -299,27 +299,27 @@ read_tsv = lambda filename: read_csv(filename,"\t")
 for sep in seps:
 	reader[sep] = lambda filename: read_csv(filename, sep)
 
-#Lambda Operator (map, filter, reduce) 
-#list와 관련된 부분들을 전부 lambda 하나로 해결할 수 있다. 
+#Lambda Operator (map, filter, reduce)
+#list와 관련된 부분들을 전부 lambda 하나로 해결할 수 있다.
 
 
 ```
 
 
-### 예상 문제 
+### 예상 문제
 
-``` python 
+``` python
 
-#is_palindrome("토마토") =true 
+#is_palindrome("토마토") =true
 #is_palindrome("ABCDCBA") = true
 
   def is_plaindrome(text):
 	length = len(text)
 	for i in range(length):
-		left = string[i] 
+		left = string[i]
 		right = string[length-1-i]
-		
-		if left != right 
+
+		if left != right
 			return False
 
 	return True
@@ -329,16 +329,12 @@ for sep in seps:
    def is_planindrome(string):
 	return string == string[::-1]
 
-   
-   #Lambda 
+
+   #Lambda
    is_palindrome = lambda x: x == x[::-1]
 
 
 ```
 
-ubuntu 1.4.04 verison pyenv, virtualenv, autoenv _ project 2-3 만든 후 activate 여부 확인 
+ubuntu 1.4.04 verison pyenv, virtualenv, autoenv _ project 2-3 만든 후 activate 여부 확인
 PEP8 문서를 읽어오기, 스타일 가이드에 맞게 작성할 수 있게 하기
-
-
-
-

@@ -2,7 +2,7 @@
 published: true
 title: 파이썬 중급 2일차
 layout: post
-category: programming_kr
+category: programming
 permalink: /programming_kr/python_2
 ---
 
@@ -407,5 +407,3 @@ def snail(n):
 snail(5)
 
 ```
-
-

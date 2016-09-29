@@ -2,15 +2,15 @@
 published: true
 title: 파이썬 중급 3일차
 layout: post
-category: programming_kr
+category: programming
 permalink: /programming_kr/python_3
 ---
 
-### 함수 
+### 함수
 
 함수를 리턴하는 함수 중에서 decorator가 존재
-<br> 함수의 실행 시간을 측정하는 함수 
-<br> Decorator 사용 방법 
+<br> 함수의 실행 시간을 측정하는 함수
+<br> Decorator 사용 방법
 
 ``` python
 
@@ -56,14 +56,14 @@ print(get_multiply_by(2)(100))
 ```
 
 
-<br> 
+<br>
 
-### Decorator 
+### Decorator
 
-함수를 input으로 받아서 새로운 함수를 만들어서 리턴하는 것 
-<br> wrapper라고도 한다. 
+함수를 input으로 받아서 새로운 함수를 만들어서 리턴하는 것
+<br> wrapper라고도 한다.
 
-``` python 
+``` python
 
 def start_time(func):
     print("start function")
@@ -107,11 +107,11 @@ hello("안수찬")
 #wrapper 실행 순서
 
     #start_function 선언
-    #end_function 선언 
-    #track_function 선언 
- 
-    #start_inner_function의 함수 실행 -> print한 다음에 함수 
-    #end_inner_function 함수 실행 -> 함수 실행 후 print 
+    #end_function 선언
+    #track_function 선언
+
+    #start_inner_function의 함수 실행 -> print한 다음에 함수
+    #end_inner_function 함수 실행 -> 함수 실행 후 print
     #track_inner_function 함수 실행  -> 함수 실행 후 prin
 
 ```
@@ -119,13 +119,13 @@ hello("안수찬")
 
 <br>
 
-### List, Dict 예제 
+### List, Dict 예제
 1. 배열 타입을 입력할 것 ["fast", "campus", "fast", "campus", "school", "fast", "fast"]
-2. for 
-3. lambda 
-4. comprehensive 
+2. for
+3. lambda
+4. comprehensive
 5. 가장 많이 누적된 점수 순서로 출력할 것
- 
+
 ```python
 
 data = ["fast", "campus", "fast", "campus", "school", "fast", "fast"]
@@ -143,7 +143,7 @@ def parameter(arg):
         "campus" : 0,
         "school" : 0
     }
-    
+
     for i in data:
         argdict[i] +=1
 
@@ -212,7 +212,7 @@ def histogram(elements):
     print(sorted(hist))
     print(sorted(hist, key=lambda key: hist[key]))
     print(sorted(hist, key=lambda key: hist[key])[::-1])
-    
+
 print(histogram(ele))
 
 
@@ -221,11 +221,11 @@ print(histogram(ele))
 
 <br>
 
-### 피보나치 수열 
-1. 숫자를 입력할 것 
-2. 해당 숫자만큼의 마지막 피보나치 수자를 리턴할 것 
-3. for 문 
-4. recursive 
+### 피보나치 수열
+1. 숫자를 입력할 것
+2. 해당 숫자만큼의 마지막 피보나치 수자를 리턴할 것
+3. for 문
+4. recursive
 
 ``` python
 
@@ -252,7 +252,7 @@ print(fibo(10))
 
 <br>
 
-### Recursive 
+### Recursive
 
 ``` python
 
@@ -269,8 +269,8 @@ def factorial(n):
     if n <= 1:
         return 1
     return n * factorial(n-1)
-    
-    
+
+
 # f(5) = f(4) + f(3)
 #      = (f(3) + f(2)) + (f(2) + f(1))
 #      = ((f(2) + f(1))) ...
@@ -279,7 +279,7 @@ def factorial(n):
 
 <br>
 
-### 동적 계획법 Memoization 
+### 동적 계획법 Memoization
 
 - 결과값을 저장해두는 방법 - memoization
 - 동적 계획법 - 기억하며 풀기
@@ -323,7 +323,7 @@ print(fibo_recur(10))
 
 
 
-# Refractor 과정 1 
+# Refractor 과정 1
 
 def memoize(func):
     __cache = {}
@@ -338,7 +338,7 @@ def memoize(func):
     return wrapper
 
 
-# Refractor 과정 2 
+# Refractor 과정 2
 
 def memoize(func):
     __cache = {}
@@ -355,11 +355,11 @@ print(fibo_recur(10))
 
 <br>
 
-### 클래스 
+### 클래스
 
 1. 절차 지향적 프로그래밍 data, function
-2. 객체 제향 프로그래밍, Object - 상태, 행동(Behavior == Function) 
-3. 함수형 프로그래밍, Function(stateless), CommonList(Scheme), o'Camal - 굉장히 희귀한 언어 
+2. 객체 제향 프로그래밍, Object - 상태, 행동(Behavior == Function)
+3. 함수형 프로그래밍, Function(stateless), CommonList(Scheme), o'Camal - 굉장히 희귀한 언어
 4. SICP 컴퓨터 프로그램의 구조와 해석 - 이색적인 시각으로 컴퓨터를 다시 해석   
 
 ``` python

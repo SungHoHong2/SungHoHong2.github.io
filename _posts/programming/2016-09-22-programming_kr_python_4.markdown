@@ -2,14 +2,14 @@
 published: true
 title: 파이썬 중급 4일차
 layout: post
-category: programming_kr
+category: programming
 permalink: /programming_kr/python_4
 ---
 
 ### 클래스
 1. Animal Class
 2. State type(string): "dog", "cat", "fish"
-3. State type weight : 
+3. State type weight :
 4. Behavior "먹이를 먹습니다."
 
 
@@ -20,10 +20,10 @@ class Animal:
         self.weight = weight
         self.name = name
 
-    # polymorphism 
-    # 함수가 다른 형태로 사용할 수 있을 떄 
+    # polymorphism
+    # 함수가 다른 형태로 사용할 수 있을 떄
     # - Parametic Polymorphism
-    
+
     def eat(self, *args):
         #print([i for i in args])
         if not args:
@@ -57,10 +57,10 @@ d4.swim()
 
 ### 상속
 
-1. 삼각형 사각형 
-2. width, height를 가진다. 
-3. area = w * h / 2, area = w * h 
-  
+1. 삼각형 사각형
+2. width, height를 가진다.
+3. area = w * h / 2, area = w * h
+
 ``` python
 
 class Shape:
@@ -88,7 +88,7 @@ t1 = Tri(10,20)
 print(r1.area())
 print(t1.area())
 print(r1.is_bigger_than(t1))
- 
+
 ```
 
 <br>
@@ -215,7 +215,7 @@ f1.swim()
 
 <br>
 
-### Instance, Class, Static method 
+### Instance, Class, Static method
 
 ``` python
 
@@ -255,7 +255,7 @@ print(awsome.what())
 
 <br>
 
-### 실습 예제 - 로그인 
+### 실습 예제 - 로그인
 
 ``` python
 
@@ -358,7 +358,7 @@ def admin(request):
 request = Request("/admin/", user2)
 print(admin(request))
 
-# 현재는 로그인 권한과 관리자 권한 두개 다 작동한다. 
+# 현재는 로그인 권한과 관리자 권한 두개 다 작동한다.
 request = Request("/admin/")
 print(admin(request))
 
@@ -372,9 +372,9 @@ print(admin(request))
 ### Web Crawling
 
 1. 정적인 사이트 - 네이버 홈페이지
-2. 동적인 사이트 - client에서 data가 rendering, ajax 등으로 javascript로 data를 받는다. 
-3. 국내 사이트 (Javascript) - 사내 인트라넷 등 등 
-4. 한국형 사이트 : iFrame - 네이버 카페, 옛날 사이트 
+2. 동적인 사이트 - client에서 data가 rendering, ajax 등으로 javascript로 data를 받는다.
+3. 국내 사이트 (Javascript) - 사내 인트라넷 등 등
+4. 한국형 사이트 : iFrame - 네이버 카페, 옛날 사이트
 
 ``` python
 
@@ -403,4 +403,3 @@ elements = result.select("ol#realrank li")
 print([element.select_one("a").attrs["title"] for element in elements[:-1:]])
 
 ```
-
