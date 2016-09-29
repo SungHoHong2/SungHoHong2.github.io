@@ -8,5 +8,5 @@ permalink: /artworks/
 
 ### Undertale Artwork
 
-<img width="100%" src = "../public/image/project_5">
-<img width="100%" src = "../public/image/project_6">
+<img width="100%" src = "/public/image/project_5.png">
+<img width="100%" src = "/public/image/project_6.png">
