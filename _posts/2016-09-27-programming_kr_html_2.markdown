@@ -159,3 +159,6 @@ button.btn-join
   cursor: pointer
 
 ```
+
+
+### Bootstrap 기본
