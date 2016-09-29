@@ -10,6 +10,9 @@ permalink: /programming_kr/html_5
 
 bootstrap의 주어진 기능만을 최대한 활용해서 작성한 레이아웃
 
+<img src="../public/image/homework1.png" width="180%">
+
+
 > #### index.html
 
 ```html
