@@ -3,7 +3,7 @@ published: true
 title: HTML 초급 1일차
 layout: post
 category: programming
-permalink: /programming_kr/html_5
+permalink: /programming_kr/html_5_1
 ---
 
 ### HTML의 기본구조

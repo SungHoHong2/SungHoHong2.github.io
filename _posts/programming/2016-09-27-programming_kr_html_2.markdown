@@ -3,7 +3,7 @@ published: true
 title: HTML 초급 2일차
 layout: post
 category: programming
-permalink: /programming_kr/html_5
+permalink: /programming_kr/html_5_2
 ---
 
 ### Bootstrap 활용 과제
