@@ -142,3 +142,33 @@ From the example below
 ```
 
 ### Navigation
+
+``` html
+
+<!-- navigation div should not be dependent on the grid -->
+
+<div class="navbar navbar-default">
+<div class="container">
+    <!-- <div class="row"> -->
+        <!-- <div class="col-md-12"> -->
+          <div class="navbar-header">
+              <h1> <a href='' class="navbar-brand"> Blasting off with Bootstrap </a> </h1>
+        <!-- </div> -->
+    <!-- </div> -->
+
+          <!-- The button only shows when the width becomes small -->
+          <button type='button' class='navbar-toggle' data-toggle='collapse' data-target='.navbar-collapse'>
+            <span class="sr-only">Toggle navigation</span>
+            <i class="glyphicon glyphicon-align-justify"></i>
+          </button>
+        </div>
+
+          <ul class="nav nav-tabs navbar-right collapse navbar-collapse">
+            <li role="presentation"><a>Tickets</a></li>
+            <li role="presentation"><a>Station</a></li>
+            <li role="presentation"><a>About</a></li>
+          </ul>
+</div>
+</div>
+
+```
