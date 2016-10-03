@@ -88,3 +88,57 @@ From the example below
 </html>
 
 ```
+
+### Adjusting Smaller Resolutions
+
+| Grid Size | Grid Class | Offset Class | Screen size |
+| -- | -- | -- | -- |
+| Extra Small |  .co-xs-* | .col-xs-offset-* | 0px + |
+| Small |  .co-sm-* | .col-sm-offset-* | 768px + |
+| Medium | .co-md-* | .col-md-offset-* | 992px + |
+| Large | .col-lg-* | col-lg-offset-* | 1200px+ |     
+
+
+```html
+
+<!-- hide the image in some sizes -->
+<div class = "col-md-6 hidden-sm hidden-xs">
+    <img src = "image/frisk1.jpg"/>
+</div>
+
+<!-- show image in certain sizes -->
+<div class = "col-md-6 visible-sm visible-xs">
+    <img src = "image/maria1.jpg"/>
+</div>
+
+<div class="clearfix"></div>
+<div class="row">
+    <div class="col-sm-4 col-xs-10 col-xs-offset-1 col-sm-offset-0">
+        <h3>book today</h3>
+        <p>etcfas afsdfadsf sdfdsafasdfsadf asdfsadfsadfas dsafasdfsd</p>
+    </div>
+    <div class="col-md-4 col-sm-4 col-xs-6">
+        <h3>Go Anywhere</h3>
+        <p>etcfas afsdfadsf sdfdsafasdfsadf asdfsadfsadfas dsafasdfsd</p>
+    </div>
+    <div class="col-md-4 col-sm-4 col-xs-6">
+        <h3>RocketBus&reg</h3>
+        <p>etcfas afsdfadsf sdfdsafasdfsadf asdfsadfsadfas dsafasdfsd</p>
+    </div>
+</div>
+
+```
+
+### Addons
+
+- well class give element a gray background and a rounded gray border
+- button class designs the buttons
+
+``` html
+
+<div class = 'rows well'></div>
+<button class='btn btn-lg'>button</button>
+
+```
+
+### Navigation
