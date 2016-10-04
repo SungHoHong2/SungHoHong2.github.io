@@ -144,6 +144,7 @@ Post.objects.filter(title__contains='first')
 
 ```
 
+<hr>
 
 ### View 설정하기
 
@@ -231,7 +232,7 @@ urlpatterns = [
 
 ```
 
-{% load staticfiles %}
+%% load staticfiles %%
 
 <!DOCTYPE html>
 <html lang="ko">
@@ -246,7 +247,7 @@ urlpatterns = [
 
   <h1>{{ title }}</h1>
 
-  {% for post in posts %}
+  %% for post in posts %%
 
   <article>
   <h1 class="post_title">{{ post.title }}</h1>
@@ -254,7 +255,7 @@ urlpatterns = [
   <p class="post_created">{{ post.created }}</p>
   </article>
 
-  {% endfor %}
+  %% endfor %%
 
 </body>
 </html>
