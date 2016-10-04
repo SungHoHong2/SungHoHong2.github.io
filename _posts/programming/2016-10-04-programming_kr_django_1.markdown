@@ -145,9 +145,9 @@ Post.objects.filter(title__contains='first')
 ```
 
 
-### View 
+### View 설정하기
 
-1. os.path는 파일 경로를 생성하고 수정하고 파일 정보를 쉽게 다룰 수 있게 해주는 모듈 
+os.path는 파일 경로를 생성하고 수정하고 파일 정보를 쉽게 다룰 수 있게 해주는 모듈 
 
 - settings.py 
 
