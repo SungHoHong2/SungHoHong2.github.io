@@ -272,4 +272,4 @@ tutorial  1, 2, 3, 4
 
 2일 
 model 
-
+--
