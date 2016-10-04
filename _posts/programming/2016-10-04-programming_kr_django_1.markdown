@@ -58,6 +58,7 @@ Django는 소프트웨어 공학에서 사용되는 MVC(Model-View-Controller)�
 2. settings.py에서 post 등록
 3. python manage.py makemigrations 입력  
 4. python manage.py migrate 입력 
+5. python manage.py startapp post <- post의 App 생성 (Project > Apps) 
 
 - models.py 
 
@@ -157,6 +158,7 @@ import os
 # Build paths inside the project like this: os.path.join(BASE_DIR, ...)
 BASE_DIR = os.path.dirname(os.path.dirname(os.path.abspath(__file__)))
 TEMPLATE_DIR  = os.path.join(BASE_DIR, 'templates')
+STATIC_DIR = os.path.join(BASE_DIR, 'static')
 
 ...
  
@@ -176,6 +178,16 @@ TEMPLATES = [
         },
     },
 ]
+
+
+... 
+
+
+
+STATICFILES_DIRS = [
+    STATIC_DIR,
+]
+
 
 ```
 
@@ -198,12 +210,63 @@ def post_list(request):
 ```
 
 
+- urls.py
+
+``` python
+
+from django.conf.urls import url
+from django.contrib import admin
+from post.views import post_list
+
+
+urlpatterns = [
+    url(r'^admin/', admin.site.urls),
+    url(r'^post/list/', post_list),
+]
+
+```
+
+
+- post_list.html 
+
+```
+
+{% load staticfiles %}
+
+<!DOCTYPE html>
+<html lang="ko">
+<head>
+  <meta charset="UTF-8">
+  <meta name="viewport" content="width=device-width, initial-scale=1.0">
+  <meta http-equiv="X-UA-Compatible" content="ie=edge">
+  <link rel="stylesheet" href="{% static '/css/post_list.css' %}">
+  <title>Document</title>
+</head>
+<body>
+
+  <h1>{{ title }}</h1>
+
+  {% for post in posts %}
+
+  <article>
+  <h1 class="post_title">{{ post.title }}</h1>
+  <h2 class="post_description">{{ post.description }}</h2>
+  <p class="post_created">{{ post.created }}</p>
+  </article>
+
+  {% endfor %}
+
+</body>
+</html>
+
+```
+
 
 ### 과제 
 
 
 1일 
-django project   
+django project
 tutorial  1, 2, 3, 4 
 
 
