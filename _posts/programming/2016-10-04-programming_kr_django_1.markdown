@@ -262,15 +262,3 @@ urlpatterns = [
 
 ```
 
-
-### 과제 
-
-
-1일 
-django project
-tutorial  1, 2, 3, 4 
-
-
-2일 
-model 
---
