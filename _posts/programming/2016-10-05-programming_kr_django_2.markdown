@@ -38,4 +38,48 @@ django-admin startproject mysite
 ```
 
 
+```
+
+mysite/
+    manage.py
+    mysite/
+        __init__.py
+        settings.py
+        urls.py
+        wsgi.py
+
+```
+
+
+<br>
+
+### App 생성하기 
+
+
+```
+    
+python manage.py startapp polls
+
+```
+
+
+
+### Sub Controller 생성하기 
+
+```
+
+mysite/
+    manage.py
+    mysite/
+        __init__.py
+        settings.py
+        urls.py
+        wsgi.py
+    polls/
+        urls.py (root의 url이 polls/ url요청이 있을 경우 app의 urls.py로 넘겨준다.) 
+
+
+```
+
+
 
