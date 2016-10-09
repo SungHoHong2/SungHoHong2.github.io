@@ -19,8 +19,10 @@ Required steps to setup ImageField
 4. Update settings.py to add a media director y
 5. Add a special debugging URL to urls.py to server our media files locally 
 
+<br>
 
 app/models
+
 ```python
 
 from django.db import models
@@ -36,7 +38,10 @@ class Treasure(models.Model):
 
 ```
 
+<br>
+
 shell
+
 - install pillow for uploading the image 
 
 ```
@@ -46,9 +51,11 @@ migrations
 
 ```
 
+<br>
 
 settings.py
--add the directory path for saving images
+
+- add the directory path for saving images
 
 ```
 
@@ -57,8 +64,10 @@ MEDIA_URL = '/media/'
 
 ```
 
+<br>
 
 apps/urls.py
+
 - save images in local 
 
 ```python
@@ -84,7 +93,10 @@ if settings.DEBUG:
 
 ```
 
+<br>
+
 apps/templates/index.html
+
 - changing form type for uploading files
 
 ```html 
@@ -96,7 +108,10 @@ apps/templates/index.html
 ```
 
 
+<br>
+
 apps/views.py
+
 - add request files for uploading the image file in the forms.py
 
 ```python 
@@ -110,6 +125,7 @@ def post_treasure(request):
 
 ```
 
+<br>
 
 apps/forms.py
 
