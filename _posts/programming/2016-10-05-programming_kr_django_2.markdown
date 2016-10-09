@@ -1,6 +1,6 @@
 ---
 published: true
-title: Django 기초 1일차 - 과제
+title: Django 기초 2일차
 layout: post
 category: programming
 permalink: /programming_kr/django_2
@@ -63,8 +63,11 @@ python manage.py startapp polls
 ```
 
 
+<hr> 
 
 ### Sub Controller 생성하기 
+
+Root의 urls.py와 Application의 urls.py를 생성하기
 
 ```
 
@@ -80,6 +83,72 @@ mysite/
 
 
 ```
+
+
+mysite/polls/urls.py 
+
+```python
+
+from django.conf.urls import url, include
+from django.contrib import admin
+
+urlpatterns = [
+    url(r'^admin/', admin.site.urls),
+    url(r'^polls/', include('polls.urls')),
+]
+
+```
+
+
+url에 특정변수를로 변환하여 수신하기 
+
+``` python 
+
+urlpatterns = [
+    url(r'^$', views.index),
+    url(r'^(?P<question_id>[0-9]+)/$', views.detail, name='detail'),
+    url(r'^(?P<question_id>[0-9]+)/results/$', views.results, name='results'),
+    url(r'^(?P<question_id>[0-9]+)/vote/$', views.vote, name='vote'),
+]
+
+```
+
+
+mysite/polls/views.py
+
+``` python 
+
+from django.shortcuts import render
+from django.http import HttpResponse
+from .models import Question
+
+def index(request):
+
+     # - 일 경우에는 내림차순으로 정보를 정렬한다.
+    latest_question_list = Question.objects.order_by('-pub_date')[:5]
+    output = ', '.join([q.question_text for q in latest_question_list])
+    return HttpResponse(output)
+
+
+def detail(request, question_id):
+    return HttpResponse("You're looking at question %s." % question_id)
+
+def results(request, question_id):
+    response = "You're looking at the results of question %s."
+    return HttpResponse(response % question_id)
+
+def vote(request, question_id):
+    return HttpResponse("You're voting on question %s." % question_id)
+
+
+```
+
+
+
+
+
+
+
 
 
 

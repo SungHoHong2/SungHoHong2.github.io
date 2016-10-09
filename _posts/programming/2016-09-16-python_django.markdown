@@ -3,7 +3,7 @@ published: true
 title: Django Basic
 layout: post
 category: programming
-permalink: /programming/
+permalink: /programming/django
 ---
 
 ### what is django
