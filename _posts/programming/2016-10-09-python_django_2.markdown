@@ -11,7 +11,7 @@ permalink: /programming/
 
 <hr>
 
-Required steps to setup ImageField
+#### Required steps to setup ImageField
 
 1. add ImageField to the model
 2. Install Pillow - an image-processing library necessary for Image field 
@@ -21,7 +21,7 @@ Required steps to setup ImageField
 
 <br>
 
-app/models
+#### app/models
 
 ```python
 
@@ -40,7 +40,7 @@ class Treasure(models.Model):
 
 <br>
 
-shell
+#### shell
 
 - install pillow for uploading the image 
 
@@ -53,7 +53,7 @@ migrations
 
 <br>
 
-settings.py
+#### settings.py
 
 - add the directory path for saving images
 
@@ -66,7 +66,7 @@ MEDIA_URL = '/media/'
 
 <br>
 
-apps/urls.py
+#### apps/urls.py
 
 - save images in local 
 
@@ -95,7 +95,7 @@ if settings.DEBUG:
 
 <br>
 
-apps/templates/index.html
+#### apps/templates/index.html
 
 - changing form type for uploading files
 
@@ -110,7 +110,7 @@ apps/templates/index.html
 
 <br>
 
-apps/views.py
+#### apps/views.py
 
 - add request files for uploading the image file in the forms.py
 
@@ -127,7 +127,7 @@ def post_treasure(request):
 
 <br>
 
-apps/forms.py
+#### apps/forms.py
 
 ```python 
 
