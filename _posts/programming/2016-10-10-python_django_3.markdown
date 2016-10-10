@@ -8,9 +8,10 @@ permalink: /programming/
 
 
 
-#### Choices 
 
 <hr>
+
+### Choices 
 
 ``` python 
 
@@ -46,9 +47,10 @@ class Person(models.Model):
 <br>
 
 
-#### returning the list of strings 
 
 <hr>
+
+### returning the list of strings 
 
 
 ```
@@ -66,9 +68,11 @@ class Person(models.Model):
 <br>
 
 
-#### Many to One Relationship 
 
 <hr>
+
+### Many to One Relationship 
+
 
 ```python
 
@@ -158,9 +162,11 @@ beatles.members.set([join, paul, ringo, george])
 <br>
 
 
-#### In-depth search 
 
 <hr>
+
+### In-depth search 
+
 
 ``` 
 
