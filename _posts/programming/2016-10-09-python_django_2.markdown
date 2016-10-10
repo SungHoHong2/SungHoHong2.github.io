@@ -3,7 +3,7 @@ published: true
 title: Django Image Upload
 layout: post
 category: programming
-permalink: /programming/
+permalink: /programming/django_2
 ---
 
 
