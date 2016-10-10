@@ -1,6 +1,6 @@
 ---
 published: true
-title: Django Image Upload
+title: Django Models
 layout: post
 category: programming
 permalink: /programming/
