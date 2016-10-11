@@ -7,8 +7,6 @@ permalink: /programming/
 ---
 
 
-
-
 <hr>
 
 ### Choices 
