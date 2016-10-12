@@ -180,6 +180,143 @@ chat.emit('message','Bob');
 ```
 
 
+<br>
+
+
+
+### Streaming response 
+
+
+
+``` javascript
+
+var http = require('http');
+var server = http.createServer();
+
+server.on('request', function(request, response){
+
+    response.writeHead(200);
+
+    request.pipe(response);
+
+    /*
+    request.on('readable', function(){
+        var chunk = null;
+        while(null !== (chunk = request.read())){
+            console.log(chunk.toString());
+        }
+    })
+
+    request.on('end', function(){
+        response.end();
+    }) */
+
+}).listen(8080);
+
+```
+
+
+```
+
+curl -d 'hello' http://localhost:8080
+
+```
+
+
+
+### Using filestream 
+
+``` javascript
+
+var fs = require('fs')
+
+var file = fs.createReadStream('readme.md');
+var newFile = fs.createWriteStream('readme_copy.md');
+
+var file = fs.createReadStream('fruits.txt');
+
+file.on('readable', function(){
+    var chunk;
+    while(null !== (chunk = file.read())){
+        console.log(chunk.toString());
+    }
+})
+
+
+```
+
+
+``` javascript 
+
+var fs = require('fs')
+var http = require('http');
+
+http.createServer(function(request, response){
+    var newFile = fs.createWriteStream("readme_copy.md");
+    request.pipe(newFile)
+
+    request.on('end', function(){
+        response.end('uploaded')
+    });
+
+}).listen(8080);
+
+```
+
+
+```
+
+curl --upload-file readme.md http://localhost:8080
+
+```
+
+
+
+``` javascript
+
+var fs = require('fs')
+var http = require('http');
+
+http.createServer(function(request, response){
+    var newFile = fs.createWriteStream("readme_out.md");
+    var fileBytes = request.headers['content-length'];
+    var uploadBytes = 0;
+
+    request.on('readable', function(){
+        var chunk = null;
+        while(null !== (chunk=request.read())){
+          uploadBytes += chunk.length;
+          var progress = (uploadBytes / fileBytes) * 100;
+          response.write('progress: '+parseInt(progress, 10) + '%\n');
+        }
+    })
+
+    request.pipe(newFile)
+
+    request.on('end', function(){
+        response.end('uploaded')
+    });
+
+}).listen(8080);
+
+```
+
+
+``` javascript
+
+var fs = require('fs');
+var http = require('http');
+
+http.createServer(function(request, response){
+    response.writeHead(200, {'Content-Type' : 'text/html'});
+    var file = fs.createReadStream('index.html');
+    file.pipe(response);
+
+}).listen(8080);
+
+```
+
+<br>
 
 
 
