@@ -3,7 +3,7 @@ published: true
 title: Django Models
 layout: post
 category: programming
-permalink: /programming/
+permalink: /programming/django_3
 ---
 
 

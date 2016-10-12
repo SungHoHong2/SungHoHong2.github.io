@@ -3,7 +3,7 @@ published: true
 title: Node Js Tutorial 1 
 layout: post
 category: programming
-permalink: /programming/nodejs_1
+permalink: /programming/
 ---
 
 
