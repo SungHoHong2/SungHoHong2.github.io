@@ -33,6 +33,7 @@ STATICFILES_DIRS = [
 
 ``` python
 
+
     url(r'^member/', include('member.urls', namespace='member')),
 
 ```
@@ -255,3 +256,151 @@ lass Post(models.Model):
 admin.site.register(MyUser)
 
 ```
+
+
+<hr>
+
+
+
+
+<br>
+
+### Login 
+
+- member/forms.py
+
+```python 
+
+
+class SignupModelForm(forms.ModelForm):
+    password1 = forms.CharField(label='Password', widget= forms.PasswordInput(attrs={'class' : 'form-control'}))
+    password2 = forms.CharField(label='Password Confirm', widget= forms.PasswordInput(attrs={'class' : 'form-control'}))
+
+    class Meta:
+        model = MyUser
+
+        fields = [
+            'email',
+            'last_name',
+            'first_name',
+            'nickname',
+            'password1',
+            'password2',
+        ]
+
+        widgets = {
+            'email' : forms.EmailInput(attrs= {'class' : 'form-control'}),
+            'last_name': forms.TextInput(attrs={'class': 'form-control'}),
+            'first_name': forms.TextInput(attrs={'class': 'form-control'}),
+            'nickname': forms.TextInput(attrs={'class': 'form-control'}),
+        }
+
+
+    def save(self, commit= True):
+        user = super(SignupModelForm, self).save(commit = False)
+        user.set_password(self.cleaned_data['password'])
+        user.save()
+        return user
+
+```
+
+
+<br>
+
+- member/views/__init.py 
+
+``` python 
+
+from .login import login
+from .logout import logout
+from .signup import signup, signup2, signup3
+
+```
+
+<br>
+
+- member/views/signup.py (compartmentalized)
+
+``` python 
+
+def signup3(request):
+    context = {}
+    if request.method == 'POST':
+        form = SignupModelForm(request.POST)
+        if form.is_valid():
+            user = form.save()
+            auth_login(request, user)
+            return redirect('/')
+    else:
+        form = SignupModelForm()
+        context['form'] = form
+        return render(request, 'member/signup2.html', context)
+
+```
+
+
+<br>
+
+- member/views/login.py
+
+``` python
+
+from django.shortcuts import render, HttpResponse, redirect
+from django.contrib.auth import authenticate as auth_authentication, login as auth_login, logout as auth_logout
+from django.contrib import messages
+from member.models import MyUser
+
+
+def login(request):
+    next = request.GET.get('next')
+
+    if request.method == 'POST':
+        try:
+            username = request.POST['username']
+            password = request.POST['password']
+        except KeyError:
+            return HttpResponse("username error")
+
+        MyUser = auth_authentication(email=username, password=password)
+
+        if MyUser is not None:
+            auth_login(request, MyUser)
+            messages.success(request, "login success")
+            return redirect(next)
+        else:
+            messages.error(request, "login failed")
+            return render(request, 'member/login.html', {'error_message' : 'login failed'})
+
+    else:
+
+        return render(request, 'member/login.html', {})
+
+
+```
+
+
+<br>
+
+
+- member/views/loginout.py
+
+
+``` python
+
+from django.shortcuts import render, HttpResponse, redirect
+from django.contrib.auth import authenticate as auth_authentication, login as auth_login, logout as auth_logout
+from django.contrib import messages
+
+
+def logout(request):
+    auth_logout(request)
+    messages.success(request, "login out success")
+    return redirect('post_list')
+
+```
+
+
+
+
+
+
