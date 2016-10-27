@@ -3,7 +3,7 @@ published: true
 title: Node Js Tutorial 1 
 layout: post
 category: programming
-permalink: /programming/
+permalink: /programming/nodejs_1
 ---
 
 
@@ -32,7 +32,7 @@ Since it is built with c code it is really fast
 
 ### Blocking Code vs Non-Blocking Code 
 
-! Blocking Code | Non-Blocking Code |
+| Blocking Code | Non-Blocking Code |
 | -- | -- |
 | Finish each tasks from top to bottom | Handle tasks while doing other tasks Callbacks, (returning the result when the task is complete) are not returned in order  | 
 

@@ -22,17 +22,16 @@ STATICFILES_DIRS = [
 
 ```
 
+
 <br>
 
 <hr>
-
 
 ### 로그인 기능 추가 
 
 - urls.py 
 
 ``` python
-
 
     url(r'^member/', include('member.urls', namespace='member')),
 
@@ -133,9 +132,6 @@ def logout(request):
 <br>
 
 
-<br> 
-
-
 <hr>
 
 
@@ -223,31 +219,6 @@ AUTH_USER_MODEL = 'member.MyUser'
 
 
 <br> 
-
-- blog/models.py
-
-
-``` python
-
-lass Post(models.Model):
-    author = models.ForeignKey(settings.AUTH_USER_MODEL)
-    title = models.CharField(max_length=50)
-    text = models.TextField()
-    created_date = models.DateTimeField(auto_now_add=True)
-    published_date = models.DateTimeField(null=True, blank=True)
-
-    def publish(self):
-        self.published_date = timezone.now()
-        self.save()
-
-    def __str__(self):
-        return self.title
-
-```
-
-
-<br>
-
 
 - member/admin.py
 
