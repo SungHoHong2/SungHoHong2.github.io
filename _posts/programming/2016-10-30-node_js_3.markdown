@@ -3,9 +3,8 @@ published: true
 title: Node Js Chat server 
 layout: post
 category: programming
-permalink: /programming/
+permalink: /programming/node_3
 ---
-
 
 
 #### app.js 
