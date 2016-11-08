@@ -50,31 +50,134 @@ WSGI는 서버와 게이트웨이 , 애플리케이션과 프레임워크 양단
   - It doesn't specifically say, but I'm guessing that uWSGI is one of these middlewares. My understanding is that uWSGI acts as an adapter around your Flask app so that Flask (or any other framework you want to use) doesn't have to know specifically how to implement the app side of the WSGI specification. So to answer my own question, uWSGI and Flask together form the app side of WSGI and nginx is the web server side.
 
 
+### Zsh 
+
+Zsh is a shell designed for interactive use, although it is also a powerful scripting language. More information can be found on the "Zsh Web Pages" sites.
+The Z shell (zsh) is a Unix shell that can be used as an interactive login shell and as a powerful command interpreter for shell scripting. Zsh is an extended Bourne shell with a large number of improvements, including some features of bash, ksh, and tcsh.
+
+
+### pip list vs pip freeze 
+
+| pip list | pip freeze | 
+| -- | -- | 
+| List installed packages, including editables. | Output installed packages in requirements format. | 
+
 
 <br>
 
 ```
 
-# unsupported LOCAL settings while using pip list 
+# Use the pem to connect to the amazon server 
+    $ chmod 400 ssh_test_2.pem
+    $ ssh -i /Users/hongdavid/Documents/FastCampus/ssh_test_2.pem ubuntu@ec2-52-78-230-12.ap-northeast-2.compute.amazonaws.com
 
-$ export LC_ALL=C
 
-$ locale
-LANG=en_US.UTF-8
-LANGUAGE=
-LC_CTYPE="C"
-LC_NUMERIC="C"
-LC_TIME="C"
-LC_COLLATE="C"
-LC_MONETARY="C"
-LC_MESSAGES="C"
-LC_PAPER="C"
-LC_NAME="C"
-LC_ADDRESS="C"
-LC_TELEPHONE="C"
-LC_MEASUREMENT="C"
-LC_IDENTIFICATION="C"
-LC_ALL=C
+# Install Language pack 
+    $ sudo apt-get install language-pack-ko
+    $ sudo locale-gen ko_KR.UTF-8
+
+
+# python pip install 
+    $ sudo apt-get install python-pip
+ 
+
+# installing zsh 
+  - the console interface shoud change after this install 
+    $ sudo apt-get install zsh
+    $ sudo curl -L http://install.ohmyz.sh | sh
+    $ sudo chsh ubuntu -s /usr/bin/zsh
+
+
+# install pyenv 
+    $ sudo apt-get install -y make build-essential libssl-dev zlib1g-dev libbz2-dev \ libreadline-dev libsqlite3-dev wget curl llvm libncurses5-dev libncursesw5-dev xz-utils
+    $ curl -L https://raw.githubusercontent.com/yyuu/pyenv-installer/master/bin/pyenv-installer | bash
+
+
+# list the pyenv configuration to .zshrc 
+    $ vi ~/.zshrc
+        export PATH="/home/ubuntu/.pyenv/bin:$PATH"
+        eval "$(pyenv init -)"
+        eval "$(pyenv virtualenv-init -)" 
+
+
+# install pillow 
+    $ sudo apt-get install libtiff5-dev libjpeg8-dev zlib1g-dev \ libfreetype6-dev liblcms2-dev libwebp-dev tcl8.6-dev tk8.6-dev python-tk
+    
+    
+# Update authority of Django Directory 
+    $ sudo chown -R ubuntu:ubuntu /srv/ 
+
+
+# create django project in local
+    $ pyenv install 3.4.3 
+    $ pyenv virtualenv 3.4.3 mysite 
+    $ pyenv local { name }
+
+    $ pip install django 
+    $ pip freeze > requirements.txt 
+    $ django-admin startproject { name }
+    $ vi settings.py 
+      ALLOWED_HOSTS = ['.amazonaws.com', ]
+
+
+
+# clone the django project to server 
+    $ git clone { address }
+    $ export LC_ALL=C
+    $ pip install -r requirements.txt 
+    $ python manage.py runserver 0:8080
+
+
+# add 8080 port in amazon server 
+  - (Bottom UI) Security groups / launch-wizard-3 
+  - (BOTTOM UI) Inbound -> add protocol 8080
+
+
+
+# add user for managing the web application 
+   - the root should not manage the application 
+    $ sudo adduser nginx
+
+   
+    /* there may be a error in the pyenv mainly caused by the server  */  
+        - exit the server and enter it again 
+        - you might have to install the whole process regarding to pip  
+
+
+
+# create mysite.ini for uWSGI site connection 
+    $ pip install uwsgi
+    $ uwsgi --http :8080 --home ~/.pyenv/versions/mysite --chdir /srv/mysite_tutorial_2/mysite -w mysite.wsgi
+
+
+# create uWSGI site file for easy access 
+    
+    
+
+
+
+
+
+
+   
+
+
+
+
+ 
+ 
+ 
+
+ 
+ 
+
+ 
+
+
+
+
+
+
 
 ```
 
