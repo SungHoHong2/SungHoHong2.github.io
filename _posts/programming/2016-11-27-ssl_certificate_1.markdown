@@ -77,7 +77,6 @@ The newly created server.key file has no more passphrase in it.
 
 $ openssl x509 -req -days 365 -in server.csr -signkey server.key -out server.crt
 
-
 ```
 
 

@@ -3,7 +3,7 @@ published: true
 title: Undertale Fanart
 layout: post
 category: artworks
-permalink: /artworks/
+permalink: /artworks/undertale_4
 ---
 
 ### Undertale Artwork
