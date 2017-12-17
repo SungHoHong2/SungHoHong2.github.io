@@ -66,7 +66,10 @@ time {
 
 .outer_header{
 	background: $header;
-	width: 100%
+	width: 100%;
+	height:300px;
+	display:block;
+	float:left;
 }
 
 .no_header{
