@@ -16,10 +16,9 @@
 </aside>
 
 {% if page.title == page_blog %}
-<header>
-</header>
 {% else %}
 <header>
+	{{page.title}}
 	<h1><a href="{{ site.baseurl }}">{{ site.title }}</a></h1>
 </header>
 {% endif %}
