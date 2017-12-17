@@ -37,7 +37,8 @@ a:hover {
 	text-decoration: underline;
 }
 header {
-	background: $header;
+	// background: $header;
+	background-image: url('img/controlled.png');
 	padding: 0px 15px;
 	text-align: center;
 	margin: 50px 0 0;
