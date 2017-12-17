@@ -1,11 +1,10 @@
 ---
 layout: page
-title: Contact
-permalink: /contact/
+title: Resume
+permalink: /resume/
 ---
 
-Contact content goes here.
-
+list of resume info
 
 ![test](/img/controlled.png)
 
