@@ -1,7 +1,7 @@
 ---
 layout: page
-title: Artworks
-permalink: /artworks/
+title: Art & Media
+permalink: /art_media/
 ---
 
 - list of art projects
