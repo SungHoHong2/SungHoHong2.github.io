@@ -37,7 +37,11 @@ a:hover {
 	text-decoration: underline;
 }
 header {
-	background: $header;
+	// background: $header;
+	background-image: url('https://vignette.wikia.nocookie.net/vsbattles/images/e/e7/Chara.%28Undertale%29.full.1986531.jpg/revision/latest/scale-to-width-down/1000?cb=20160717172349');
+	background-repeat: no-repeat;
+	background-position: center;
+	background-attachment: fixed;
 	padding: 0px 15px;
 	text-align: center;
 	margin: 50px 0 0;
@@ -62,14 +66,15 @@ time {
 
 .inner_header{
 	// background: $header;
-	background-image: url('https://vignette.wikia.nocookie.net/vsbattles/images/e/e7/Chara.%28Undertale%29.full.1986531.jpg/revision/latest/scale-to-width-down/1000?cb=20160717172349');
-	background-repeat: no-repeat;
-	background-position: center;
-	background-attachment: fixed;
+	// background-image: url('https://vignette.wikia.nocookie.net/vsbattles/images/e/e7/Chara.%28Undertale%29.full.1986531.jpg/revision/latest/scale-to-width-down/1000?cb=20160717172349');
+	// background-repeat: no-repeat;
+	// background-position: center;
+	// background-attachment: fixed;
+	padding: 0px 15px;
 	text-align: center;
+	margin: 50px 0 0;
 	height: 300px;
-	width: 800px;
-	// display: flex;
+	display: flex;
 	justify-content: center;
 	align-items: center;
 }
