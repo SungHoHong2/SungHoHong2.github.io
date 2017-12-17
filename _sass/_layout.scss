@@ -38,7 +38,7 @@ a:hover {
 }
 header {
 	// background: $header;
-	background-image: url('https://sunghohong2.github.io/img/controlled.png');
+	background-image: url($header_image);
 	padding: 0px 15px;
 	text-align: center;
 	margin: 50px 0 0;
