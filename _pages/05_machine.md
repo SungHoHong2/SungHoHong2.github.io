@@ -1,6 +1,6 @@
 ---
 layout: page
-title: Machine Learning
+title: AI
 permalink: /machine/
 ---
 

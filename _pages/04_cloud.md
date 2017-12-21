@@ -1,6 +1,6 @@
 ---
 layout: page
-title: Cloud Computing
+title: Cloud
 permalink: /cloud_computing/
 ---
 
