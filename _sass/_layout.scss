@@ -84,7 +84,8 @@ time {
 }
 
 img {
-	max-width: $content-width;
+	// max-width: $content-width;
+	width: 100%;
 	margin: 0 auto;
 }
 
