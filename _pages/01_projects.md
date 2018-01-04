@@ -4,12 +4,15 @@ title: Projects
 permalink: /Projects/
 ---
 
+<br>
+
 ### O2O Purchase-system for Korea-Indonesia-Vietnam
 - 2016.6 - 2016.9
 - Develop and adjust key interface for purchase system
 - Maintenance of Server-Batch, Database Procedures, and Tomcat Server
 - Merged customized policy system for foreign eastern companies.
 
+<br>
 
 ### Key Framework for both front-end and back-end developers
 - 2015.1- 2016.6
