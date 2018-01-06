@@ -4,6 +4,18 @@ title: Comp-Sci
 permalink: /computer_science/
 ---
 
+
+### [SSD Scheduler](https://github.com/SungHoHong2/SSD-Scheduler)
+- Optimizing performance for Solid State Disk by
+    - implementing heap algorithm to sort for queue requests
+    - virtual_time only uses logical_time
+    - limit the number of concurrent I/O requests(Depth)
+- Evaluate the performance by offset results
+    - track the offsets in scheduler with strace
+    - track the offsets in userspace with modified FIO
+
+<br>
+
 ### O2O Purchase-system for Korea-Indonesia-Vietnam
 - 2016.6 - 2016.9
 - Develop and adjust key interface for purchase system

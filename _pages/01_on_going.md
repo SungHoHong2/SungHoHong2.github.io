@@ -1,12 +1,8 @@
 ---
 layout: page
-title: Projects
-permalink: /Projects/
+title: On Going
+permalink: /on_going/
 ---
-
-## On-going Projects
-
-<br>
 
 ### DMA Research
 - Researching for possible optimization on cloud services using DPDK and RDMA
