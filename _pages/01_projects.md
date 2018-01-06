@@ -4,18 +4,19 @@ title: Projects
 permalink: /Projects/
 ---
 
-<br>
-
-### O2O Purchase-system for Korea-Indonesia-Vietnam
-- 2016.6 - 2016.9
-- Develop and adjust key interface for purchase system
-- Maintenance of Server-Batch, Database Procedures, and Tomcat Server
-- Merged customized policy system for foreign eastern companies.
+## On-going Projects
 
 <br>
 
-### Key Framework for both front-end and back-end developers
-- 2015.1- 2016.6
-- Develop front-side templates such as `JSP` and `FreeMarker` and back-end framework such as `cross-domain` policies and `java interfaces`
-- Database Migration from Oracle to Mysql: queries, procedures and schema policies
-- Tuning interfaces of batch server receiving signals from beacon, ultra-sonic, wifi
+### DMA Research
+- Researching for possible optimization on cloud services using DPDK and RDMA
+- [DPDK Experiment](https://github.com/SungHoHong2/DPDK-Experiment)
+- [RDMA Experiment](https://github.com/SungHoHong2/RDMA-Experiment)
+- [Benchmark Experiments for DPDK and RDMA](https://github.com/SungHoHong2/DPDK-RDMA-PERF)
+
+<br>
+
+### Fan-Art Illustration
+- Honing illustration skills for future Webtoon Arts
+- [Artworks in Tumblr](https://www.tumblr.com/blog/objective-art)
+- [Artworks in Pinterest](https://www.pinterest.co.kr/maverickjin88/)
