@@ -6,7 +6,7 @@ permalink: /computer_science/
 
 <br>
 
-### [SSD Scheduler](https://github.com/SungHoHong2/SSD-Scheduler)
+### [Optimizing SSD Scheduler](https://github.com/SungHoHong2/SSD-Scheduler)
 - **Optimizing performance for Solid State Disk**
     - implementing heap algorithm to sort for queue requests
     - virtual_time only uses logical_time
