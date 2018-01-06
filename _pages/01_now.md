@@ -1,7 +1,7 @@
 ---
 layout: page
-title: On Going
-permalink: /on_going/
+title: Now
+permalink: /now/
 ---
 
 ### DMA Research
