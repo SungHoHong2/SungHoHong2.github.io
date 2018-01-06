@@ -16,7 +16,7 @@ permalink: /computer_science/
 
 <br>
 
-### [2016.6 - 2016.9   Global O2O Purchase-system (link available)](2_Recent_project_in_my_company.pdf)
+### [2016.6 - 2016.9   Global O2O Purchase-system (link available)](/img/2_Recent_project_in_my_company.pdf)
 - Develop and adjust key interface for purchase system
 - Maintenance of Server-Batch, Database Procedures, and Tomcat Server
 - Merged customized policy system for foreign eastern companies.
