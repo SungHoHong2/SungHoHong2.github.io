@@ -5,7 +5,7 @@ permalink: /computer_science/
 ---
 
 
-### [2017.5 - 2017.9   SSD Scheduler](https://github.com/SungHoHong2/SSD-Scheduler)
+### [SSD Scheduler](https://github.com/SungHoHong2/SSD-Scheduler)
 - **Optimizing performance for Solid State Disk**
     - implementing heap algorithm to sort for queue requests
     - virtual_time only uses logical_time
@@ -16,14 +16,14 @@ permalink: /computer_science/
 
 <br>
 
-### [2016.6 - 2016.9   Global O2O Purchase-system (link available)](/img/2_Recent_project_in_my_company.pdf)
+### [Global O2O Purchase-system (link available)](/img/2_Recent_project_in_my_company.pdf)
 - Develop and adjust key interface for purchase system
 - Maintenance of Server-Batch, Database Procedures, and Tomcat Server
 - Merged customized policy system for foreign eastern companies.
 
 <br>
 
-### 2015.1- 2016.6   Key Framework for both front-end and back-end developers
+### Key Framework for both front-end and back-end developers
 - Develop front-side templates such as `JSP` and `FreeMarker` and back-end framework such as `cross-domain` policies and `java interfaces`
 - Database Migration from Oracle to Mysql: queries, procedures and schema policies
 - Tuning interfaces of batch server receiving signals from beacon, ultra-sonic, wifi
