@@ -1,7 +1,7 @@
 ---
 layout: page
-title: Cloud
-permalink: /cloud_computing/
+title: Computer Science
+permalink: /computer_science/
 ---
 
 - list of projects related to cloud computing
