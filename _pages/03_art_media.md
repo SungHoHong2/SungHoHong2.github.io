@@ -6,7 +6,7 @@ permalink: /art_media/
 
 <br>
 
-### [Project Giraffe](https://github.com/SungHoHong2/ETECH_Hackathon_2017)
+### [First Prize in Emergen-Tech Hackathon](https://github.com/SungHoHong2/ETECH_Hackathon_2017)
 
 Project Giraffe is a remote control car controlled on web and send streamline videos to web-users. This inter-disciplinary project is made among experts pursuing H/W, S/W and art, ultimately winning the first place in Emergen-Tech Hackathon.
 
@@ -21,3 +21,12 @@ Project Giraffe is a remote control car controlled on web and send streamline vi
 - Visualized the API documents of Spring for non-majors to easily understand
 
 ![book](https://postfiles.pstatic.net/20141219_118/maverickjin8_14189763040040EfCL_JPEG/R_%C6%ED%C1%FD_%C8%AB%BC%BA%C8%A3_3.jpg?type=w2)
+
+
+<br>
+
+### [Wearable Device Cmpetition](https://blog.naver.com/maverickjin8/220782842887)
+- Korea National S/W Competition sponsored by the Ministry of Knowledge-Based Economy
+- Worked as back-end developer for developing and maintaining the socket-server
+- Designed and developed the 3D graphics for the mobile boxing game and the multi-
+chatting server for multiple users engaged in activities in the game
