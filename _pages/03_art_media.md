@@ -4,6 +4,8 @@ title: Art & Media
 permalink: /art_media/
 ---
 
+<br>
+
 ### [Project Giraffe](https://github.com/SungHoHong2/ETECH_Hackathon_2017)
 
 Project Giraffe is a remote control car controlled on web and send streamline videos to web-users. This inter-disciplinary project is made among experts pursuing H/W, S/W and art, ultimately winning the first place in Emergen-Tech Hackathon.
