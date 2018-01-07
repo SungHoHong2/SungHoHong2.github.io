@@ -30,3 +30,5 @@ Project Giraffe is a remote control car controlled on web and send streamline vi
 - Worked as back-end developer for developing and maintaining the socket-server
 - Designed and developed the 3D graphics for the mobile boxing game and the multi-
 chatting server for multiple users engaged in activities in the game
+
+![image](https://postfiles.pstatic.net/20160808_243/maverickjin8_1470664431877caJEi_JPEG/5082.jpg?type=w2)
