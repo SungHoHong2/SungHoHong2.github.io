@@ -25,7 +25,7 @@ Project Giraffe is a remote control car controlled on web and send streamline vi
 
 <br>
 
-### [Wearable Device Cmpetition](https://blog.naver.com/maverickjin8/220782842887)
+### [First Prize in 8th Wearable Computing Competition](https://blog.naver.com/maverickjin8/220782842887)
 - Korea National S/W Competition sponsored by the Ministry of Knowledge-Based Economy
 - Worked as back-end developer for developing and maintaining the socket-server
 - Designed and developed the 3D graphics for the mobile boxing game and the multi-
