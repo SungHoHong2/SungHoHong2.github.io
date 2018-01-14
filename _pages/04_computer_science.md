@@ -1,6 +1,6 @@
 ---
 layout: page
-title: Comp-Sci
+title: Computing
 permalink: /computer_science/
 ---
 
