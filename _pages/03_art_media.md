@@ -1,4 +1,4 @@
----
+<!-- ---
 layout: page
 title: Art & Media
 permalink: /art_media/
@@ -25,4 +25,4 @@ Project Giraffe is a remote control car controlled on web and send streamline vi
 - Korea National S/W Competition sponsored by the Ministry of Knowledge-Based Economy
 - Worked as back-end developer for developing and maintaining the socket-server
 - Designed and developed the 3D graphics for the mobile boxing game and the multi-
-chatting server for multiple users engaged in activities in the game
+chatting server for multiple users engaged in activities in the game -->

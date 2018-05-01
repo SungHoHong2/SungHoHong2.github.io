@@ -1,4 +1,4 @@
----
+<!-- ---
 layout: page
 title: Now
 permalink: /now/
@@ -17,4 +17,4 @@ permalink: /now/
 ### Fan-Art Illustration
 - Honing illustration skills for future Webtoon Arts
 - [Artworks in Tumblr](https://www.tumblr.com/blog/objective-art)
-- [Artworks in Pinterest](https://www.pinterest.co.kr/maverickjin88/)
+- [Artworks in Pinterest](https://www.pinterest.co.kr/maverickjin88/) -->

@@ -1,4 +1,4 @@
----
+<!-- ---
 layout: page
 title: Computing
 permalink: /computer_science/
@@ -27,4 +27,4 @@ permalink: /computer_science/
 ### Key Framework for both front-end and back-end developers
 - Develop front-side templates such as `JSP` and `FreeMarker` and back-end framework such as `cross-domain` policies and `java interfaces`
 - Database Migration from Oracle to Mysql: queries, procedures and schema policies
-- Tuning interfaces of batch server receiving signals from beacon, ultra-sonic, wifi
+- Tuning interfaces of batch server receiving signals from beacon, ultra-sonic, wifi -->
