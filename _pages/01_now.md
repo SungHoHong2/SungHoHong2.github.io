@@ -4,4 +4,4 @@ title: Now
 permalink: /now/
 ---
 
-![image](img/cloud.png)
+![image](/img/cloud.png)
