@@ -1,7 +1,7 @@
 ---
 layout: page
-title: cloud
-permalink: /cloud/
+title: Projects
+permalink: /Projects/
 ---
 
 ### DPDK versus Infiniband
