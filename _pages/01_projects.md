@@ -1,12 +1,11 @@
 ---
 layout: page
-title: Projects
-permalink: /Projects/
+title: DPDK over MPI
+permalink: /dpdk_over_mpi/
 ---
 
-### DPDK versus Infiniband
+<script>
 
-### Ceph-DPDK
+window.location.assign("https://www.w3schools.com")
 
-### Art Experiments
-- https://github.com/SungHoHong2/SungHoHong2.github.io.git
+</script>
